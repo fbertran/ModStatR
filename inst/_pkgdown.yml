@@ -1,0 +1,33 @@
+navbar:
+  title: "ModStatR"
+  type: inverse
+  left:
+    - icon: fa-home
+      href: index.html
+    - text: "Code du livre"
+      menu:
+      - text: "Chapitre 1 : Généralités sur le langage R"
+        href: articles/Chapitre1.html
+      - text: "Chapitre 2 : Mesures de liaison"
+        href: articles/Chapitre2.html
+      - text: "Chapitre 3 : Analyse exploratoire des données"
+        href: articles/Chapitre3.html
+      - text: "Chapitre 4 : Analyse de régression"
+        href: articles/Chapitre4.html
+    - text: "Solutions des exercices"
+      menu:
+      - text: "Chapitre 1 : Généralités sur le langage R"
+        href: articles/SolChapitre1.html
+      - text: "Chapitre 2 : Mesures de liaison"
+        href: articles/SolChapitre2.html
+      - text: "Chapitre 3 : Analyse exploratoire des données"
+        href: articles/SolChapitre3.html
+      - text: "Chapitre 4 : Analyse de régression"
+        href: articles/SolChapitre4.html
+    - text: "Liste des fonctions"
+      href: reference/index.html
+    - text: "Historique des modifications"
+      href: news/index.html
+  right:
+    - icon: fa-github
+      href: https://github.com/fbertran/ModStatR

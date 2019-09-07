@@ -1,0 +1,22 @@
+Package: ModStatR
+Type: Package
+Title: Modélisation Statistique par la Pratique avec R
+Version: 1.0.0
+Date: 2019-09-03
+Depends: R (>= 3.5.0)
+Imports: stats, boot, ggplot2, BioStatR, jmuOutlier, ellipse, hypergeo, gsl
+Authors@R: c(
+	person(given = "Frederic", family= "Bertrand", role = c("cre", "aut"), email = "frederic.bertrand@math.unistra.fr", comment = c(ORCID = "0000-0002-0837-8281")),
+	person(given = "Emmanuelle", family= "Claeys", role = c("aut"), email = "emmanuelle.claeys@unistra.fr"),
+	person(given = "Myriam", family= "Maumy-Bertrand", role = c("aut"), email = "myriam.maumy-bertrand@math.unistra.fr", comment = c(ORCID = "0000-0002-4615-1512")))
+Author: Frederic Bertrand [cre, aut] (<https://orcid.org/0000-0002-0837-8281>), Myriam Maumy-Bertrand [aut] (<https://orcid.org/0000-0002-4615-1512>)
+Maintainer: Frederic Bertrand <frederic.bertrand@math.unistra.fr>
+Description: Datasets and functions for the book "Modélisation statistique par la pratique avec R", Dunod, 1ere edition, 2019.
+LazyLoad: yes
+LazyData: yes
+License: GPL-3
+Encoding: UTF-8
+Classification/MSC:
+URL: http://www-irma.u-strasbg.fr/~fbertran/, https://github.com/fbertran/ModStatR
+BugReports: https://github.com/fbertran/ModStatR/issues
+RoxygenNote: 6.1.1

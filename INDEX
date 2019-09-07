@@ -1,0 +1,14 @@
+binom.ci                Intervalles de confiance pour une proportion
+cvar                    Coefficient de variation
+eta2                    Calcul du rapport de corrélation eta carré
+Europe                  Durées de travail en Europe
+Extrait_Taille          Mesures de fruits d'arbustes
+Mesures                 Mesures de fruits d'arbustes
+Mesures5                Mesures de fruits d'arbustes
+panel.hist              Histrogammes
+plotcdf2                Représentation bivariée des variables
+                        discrètes ou des variables continues groupées
+                        en classes.
+poi.ci                  Intervalle de confiance pour le paramètre
+                        d'une loi de Poisson
+Quetelet                Indices de Quetelet

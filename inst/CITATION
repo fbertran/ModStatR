@@ -1,0 +1,36 @@
+citHeader("To cite the ModStatR package in publications use:")
+
+titl <- meta$Title
+year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", meta$Date)
+vers <- paste("R package version", meta$Version)
+publishe <- "Dunod, Paris"
+edition <- "1ère édition"
+
+citEntry(entry="Manual",
+         title = titl,
+         author = personList(as.person("F. Bertrand"),
+                             as.person("E. Claeys"),
+                             as.person("M. Maumy-Bertrand")),
+         year         = year,
+         note         = vers,
+         url          = "http://www-irma.u-strasbg.fr/~fbertran/ModStatR",
+         textVersion = 
+         paste("Frédéric Bertrand, Emmanuelle Claeys and Myriam Maumy-Bertrand (",year ,"). ", 
+               titl, ", ", vers, ".", sep=""
+               )
+)
+
+
+citEntry(entry="Book",
+         title = "Modélisation statistique par la pratique avec R",
+         author = personList(as.person("F. Bertrand"),
+                             as.person("E. Claeys"), 
+                             as.person("M. Maumy-Bertrand")),
+	 publisher = "Dunod, Paris",
+         year         = 2019,
+         url          = "http://www-irma.u-strasbg.fr/~fbertran/ModStatR/",
+         textVersion = 
+         paste("Frédéric Bertrand, Emmanuelle Claeys and Myriam Maumy-Bertrand (", year ,"). ", 
+               titl, ", ", edition,", ", publishe, ".", sep=""
+               )
+)
