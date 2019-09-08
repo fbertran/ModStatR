@@ -3,7 +3,7 @@
 \docType{data}
 \name{ecole2}
 \alias{ecole2}
-\title{Jeu de données école}
+\title{Jeu de données école (2 variables)}
 \format{Un objet \code{data.frame} avec 119 lignes et 2 variables :
 \describe{
   \item{\code{Maths}}{Numerical vector, Note en mathématiques}

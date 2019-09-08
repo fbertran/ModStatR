@@ -3,10 +3,7 @@
 \docType{data}
 \name{d_pres2007}
 \alias{d_pres2007}
-\title{Elections presidentielles 2007
-
-Jeu de données sur le premier tour des élections présidentielles de 2002.
-Les noms des lignes indiquent les régions.}
+\title{Elections presidentielles 2007 : premier tour}
 \format{Un objet \code{data.frame} avec 12 variables et 23 observations :
 \describe{
   \item{Sarkozy}{Integer vector, Nombre de votes par région}
@@ -26,8 +23,6 @@ Les noms des lignes indiquent les régions.}
 d_pres2007
 }
 \description{
-Elections presidentielles 2007
-
 Jeu de données sur le premier tour des élections présidentielles de 2002.
 Les noms des lignes indiquent les régions.
 }

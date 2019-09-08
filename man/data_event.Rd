@@ -3,7 +3,7 @@
 \docType{data}
 \name{data_event}
 \alias{data_event}
-\title{Matchs de football}
+\title{Matchs de football joués en France de 2011/2012 à 2016/2017}
 \format{Un objet \code{data.frame} avec 208446 lignes et 40 variables :
 \describe{
   \item{\code{X}}{Integer vector, identifiant unique de ligne}
@@ -54,10 +54,10 @@ Kaggle.
 data_event
 }
 \description{
-Ce ﬁchier de données fournit une vue granulaire de 208 446 matchs de football joués en France depuis la saison 2011/2012 à la saison 2016/2017.
+Ce fichier de données fournit une vue granulaire de 208 446 matchs de football joués en France depuis la saison 2011/2012 à la saison 2016/2017.
 }
 \details{
-Ces données sont une version « nettoyée » d’un ﬁchier original, events_France.csv, qu’il est possible de télécharger depuis la plate-forme Kaggle : \url{https://www.kaggle.com/secareanualin/football-events}.
+Ces données sont une version « nettoyée » d’un fichier original, events_France.csv, qu’il est possible de télécharger depuis la plate-forme Kaggle : \url{https://www.kaggle.com/secareanualin/football-events}.
 Certains matchs contiennent cependant des données manquantes (environ 10%).
 }
 \keyword{datasets}

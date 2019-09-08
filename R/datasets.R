@@ -1,6 +1,6 @@
 #' @title Cancer du sein
 #'
-#' Jeu de données cancer du sein.
+#' @description Jeu de données cancer du sein.
 #'
 #' @docType data
 #' @format Un objet \code{data.frame} avec trois variables et 62 observations :
@@ -15,7 +15,7 @@
 
 #' @title Challenger
 #'
-#' Jeu de données navette spatiale.
+#' @description Jeu de données navette spatiale.
 #'
 #' @docType data
 #' @format Un objet \code{data.frame} avec deux variables et 24 observations :
@@ -28,7 +28,7 @@
 
 #' @title Hotels
 #'
-#' Jeu de données hotels (nom des hotels dans la variable NOM).
+#' @description Jeu de données hotels (nom des hotels dans la variable NOM).
 #'
 #' @docType data
 #' @format Un objet \code{data.frame} avec neuf variables et 39 observations :
@@ -48,7 +48,7 @@
 
 #' @title Hotels
 #'
-#' Jeu de données hotels (nom des hotels en rownames).
+#' @description Jeu de données hotels (nom des hotels en rownames).
 #'
 #' @docType data
 #' @format Un objet \code{data.frame} avec huit variables et 39 observations :
@@ -67,7 +67,7 @@
 
 #' @title MacDonald
 #'
-#' Jeu de données sur les aliments vendus au McDOnald.
+#' @description Jeu de données sur des aliments vendus au McDonald.
 #'
 #' @docType data
 #' @format Un objet \code{data.frame} avec 24 variables et 260 observations :
@@ -102,9 +102,9 @@
 "d_macdo"
 #> [1] "d_macdo"
 
-#' @title Elections presidentielles 2002
+#' @title Elections presidentielles 2002 : premier tour
 #'
-#' Jeu de données sur le premier tour des élections présidentielles de 2002.
+#' @description Jeu de données sur le premier tour des élections présidentielles de 2002.
 #' Les noms des lignes indiquent les régions.
 #'
 #' @docType data
@@ -126,9 +126,9 @@
 "d_pres2002"
 #> [1] "d_pres2002"
 
-#' @title Elections presidentielles 2007
+#' @title Elections presidentielles 2007 : premier tour
 #'
-#' Jeu de données sur le premier tour des élections présidentielles de 2002.
+#' @description Jeu de données sur le premier tour des élections présidentielles de 2002.
 #' Les noms des lignes indiquent les régions.
 #'
 #' @docType data
@@ -206,9 +206,9 @@
 "d_wow"
 #> [1] "d_wow"
 
-#' @title Matchs de football
+#' @title Matchs de football joués en France de 2011/2012 à 2016/2017
 #' 
-#' @description Ce ﬁchier de données fournit une vue granulaire de 208 446 matchs de football joués en France depuis la saison 2011/2012 à la saison 2016/2017. 
+#' @description Ce fichier de données fournit une vue granulaire de 208 446 matchs de football joués en France depuis la saison 2011/2012 à la saison 2016/2017. 
 #' 
 #' @format Un objet \code{data.frame} avec 208446 lignes et 40 variables :
 #' \describe{
@@ -253,13 +253,13 @@
 #'   \item{\code{odd_bts}}{Numerical vector, highest both teams to score market odds}
 #'   \item{\code{odd_bts_n}}{Numerical vector, highest both teams NOT to score market odds} 
 #'}
-#' @details Ces données sont une version « nettoyée » d’un ﬁchier original, events_France.csv, qu’il est possible de télécharger depuis la plate-forme Kaggle : \url{https://www.kaggle.com/secareanualin/football-events}.
+#' @details Ces données sont une version « nettoyée » d’un fichier original, events_France.csv, qu’il est possible de télécharger depuis la plate-forme Kaggle : \url{https://www.kaggle.com/secareanualin/football-events}.
 #' Certains matchs contiennent cependant des données manquantes (environ 10%). 
 #' @source Kaggle. 
 "data_event"
 #> [1] "data_event"
 
-#' @title Jeu de données école
+#' @title Jeu de données école (2 variables)
 #' 
 #' @description Jeu de données école avec les résultats des tests de mathématiques et de sport. Ces données ont été simulées.
 #' 
@@ -271,7 +271,7 @@
 "ecole2"
 #> [1] "ecole2"
 
-#' @title Jeu de données école
+#' @title Jeu de données école (3 variables)
 #' 
 #' @description Jeu de données école avec non seulement les résultats des tests de mathématiques et de sport mais aussi l'âge des élèves. Ces données ont été simulées.
 #' 
@@ -348,11 +348,11 @@
 #'   \item{\code{Casseur}}{Factor w/ 3, COLUMN_DESCRIPTION}
 #'   \item{\code{Resistance}}{Integer vector, résistance en livres par pouces carrés} 
 #'}
-#' @details Davies et Goldsmith ont récolté les données d’une expérience dont le but était d’étudier les diﬀérentes sources de variabilité possibles de la résistance d’un ciment fabriqué à Portland. 
-#' L’expérience s’est déroulée ainsi : plusieurs petits prélèvements d’un même type de ciment ont été mélangés à de l’eau et travaillés par trois personnes diﬀérentes, les « mélangeurs ». On a alors formé douze cubes à l’aide de chacune des préparations des « mélangeurs ». 
+#' @details Davies et Goldsmith ont récolté les données d’une expérience dont le but était d’étudier les différentes sources de variabilité possibles de la résistance d’un ciment fabriqué à Portland. 
+#' L’expérience s’est déroulée ainsi : plusieurs petits prélèvements d’un même type de ciment ont été mélangés à de l’eau et travaillés par trois personnes différentes, les « mélangeurs ». On a alors formé douze cubes à l’aide de chacune des préparations des « mélangeurs ». 
 #' Puis on a donné ces 36 cubes à trois personnes chargées d’évaluer leur résistance, les « casseurs ». 
 #' La répartition des 36 cubes entre ces « casseurs » a été faite de telle sorte que chaque « casseur » reçoive quatre cubes provenant de chacune des préparations des « mélangeurs » soit douze cubes au total.
-#' Tous les tests de résistance ont été faits sur la même machine. L’objectif principal de cette expérience était d’étudier et de quantiﬁer l’importance de la variabilité dans les tests de résistance qui pouvait provenir des diﬀérences individuelles entre les « mélangeurs » et les « casseurs ». 
+#' Tous les tests de résistance ont été faits sur la même machine. L’objectif principal de cette expérience était d’étudier et de quantifier l’importance de la variabilité dans les tests de résistance qui pouvait provenir des différences individuelles entre les « mélangeurs » et les « casseurs ». 
 #' Les données ci-dessous, exprimées dans les unités d’origine c’est-à-dire .
 #' @source Davies, O.L. et Goldsmith, P.L. (Eds.), \emph{Statistical Methods in Research and Production}, 4th edition, Oliver and Boyd, Edinburgh, 1972.
 "resistance"
@@ -373,7 +373,7 @@
 #> [1] "SidaChat"
 
 #' @title Vitamines
-#' @description Influence de diﬀérents régimes alimentaires sur des rats de laboratoire.
+#' @description Influence de différents régimes alimentaires sur des rats de laboratoire.
 #' @format Un objet \code{data.frame} avec 32 lignes et 3 variables :
 #' \describe{
 #'   \item{\code{Calorie}}{Integer vector, COLUMN_DESCRIPTION}

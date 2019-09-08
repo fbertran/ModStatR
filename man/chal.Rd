@@ -3,9 +3,7 @@
 \docType{data}
 \name{chal}
 \alias{chal}
-\title{Challenger
-
-Jeu de données navette spatiale.}
+\title{Challenger}
 \format{Un objet \code{data.frame} avec deux variables et 24 observations :
 \describe{
   \item{Temperature}{Integer vector, Température au moment du décollage}
@@ -15,8 +13,6 @@ Jeu de données navette spatiale.}
 chal
 }
 \description{
-Challenger
-
 Jeu de données navette spatiale.
 }
 \keyword{datasets}

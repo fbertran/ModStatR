@@ -7,8 +7,6 @@
 
 #Chapitre 3 : solution des exercices
 
-#TODO TODO
-
 #page 227
 #Exercice 3.1
 d_hotels <- read.csv("https://tinyurl.com/y3rxbxoo")

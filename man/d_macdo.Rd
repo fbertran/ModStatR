@@ -3,9 +3,7 @@
 \docType{data}
 \name{d_macdo}
 \alias{d_macdo}
-\title{MacDonald
-
-Jeu de données sur les aliments vendus au McDOnald.}
+\title{MacDonald}
 \format{Un objet \code{data.frame} avec 24 variables et 260 observations :
 \describe{
   \item{Category}{Factor w/ 9 levels, Type d'aliment}
@@ -40,9 +38,7 @@ Kaggle.
 d_macdo
 }
 \description{
-MacDonald
-
-Jeu de données sur les aliments vendus au McDOnald.
+Jeu de données sur des aliments vendus au McDonald.
 }
 \details{
 Ce jeu de données a été extrait de kaggle où il est possible de trouver une description complémentaire des variables.

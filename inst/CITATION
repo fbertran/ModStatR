@@ -13,7 +13,7 @@ citEntry(entry="Manual",
                              as.person("M. Maumy-Bertrand")),
          year         = year,
          note         = vers,
-         url          = "http://www-irma.u-strasbg.fr/~fbertran/ModStatR",
+         url          = "https://github.com/fbertran/ModStatR",
          textVersion = 
          paste("Frédéric Bertrand, Emmanuelle Claeys and Myriam Maumy-Bertrand (",year ,"). ", 
                titl, ", ", vers, ".", sep=""
@@ -28,7 +28,7 @@ citEntry(entry="Book",
                              as.person("M. Maumy-Bertrand")),
 	 publisher = "Dunod, Paris",
          year         = 2019,
-         url          = "http://www-irma.u-strasbg.fr/~fbertran/ModStatR/",
+         url          = "https://github.com/fbertran/ModStatR",
          textVersion = 
          paste("Frédéric Bertrand, Emmanuelle Claeys and Myriam Maumy-Bertrand (", year ,"). ", 
                titl, ", ", edition,", ", publishe, ".", sep=""

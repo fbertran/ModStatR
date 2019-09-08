@@ -7,8 +7,6 @@
 
 #Chapitre 2 : solution des exercices
 
-#TODO TODO
-
 library(BioStatR)
 
 data("Quetelet")
@@ -79,9 +77,10 @@ pcor(Quetelet_F[,-1], method = "kendall")
 
 library(GGally)
 ggpairs(Quetelet)
-pdf("ggpairsBMI.pdf")
-print(ggpairs(Quetelet))
-dev.off()
+#Pour sauvegarder le graphique enlever les commentaires des trois commandes ci-dessous
+# pdf("ggpairsBMI.pdf")
+# print(ggpairs(Quetelet))
+# dev.off()
 
 #generation de donnees de type Ecole
 library(mvtnorm)
@@ -106,8 +105,9 @@ bbb <- data.frame(bbb)
 
 ccc <- round(bbb, 2)
 ccc <- data.frame(ccc)
-write.csv(ccc,file="Ecole3.csv",row.names = FALSE)
-write.csv(ccc[,1:2],file="Ecole2.csv",row.names = FALSE)
+#Pour sauvegarder les jeux de données enlever les commentaires des deux commandes ci-dessous
+# write.csv(ccc,file="Ecole3.csv",row.names = FALSE)
+# write.csv(ccc[,1:2],file="Ecole2.csv",row.names = FALSE)
 
 mvn(ccc, mvnTest = "mardia",
     univariateTest = "SW", univariatePlot = "histogram",

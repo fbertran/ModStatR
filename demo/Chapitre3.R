@@ -51,10 +51,11 @@ ggduo(tmp_d_macdo, c("Calories"), c("Total.Fat"),
       types = list(continuous = "smooth_loess"))
 
 #page 147
-pdf("ggduo.pdf")
-ggduo(tmp_d_macdo, c("Calories"), c("Total.Fat"), 
-      types = list(continuous = "smooth_loess"))
-dev.off()
+#Pour sauvegarder le graphique enlever les commentaires des quatres lignes ci-dessous
+# pdf("ggduo.pdf")
+# ggduo(tmp_d_macdo, c("Calories"), c("Total.Fat"), 
+#       types = list(continuous = "smooth_loess"))
+# dev.off()
 
 #q6
 library(MVN)

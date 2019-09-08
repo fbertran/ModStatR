@@ -7,8 +7,6 @@
 
 #Chapitre 1 : solution des exercices
 
-#TODO TODO
-
 # page 20, solution exercice 1.2
 # q1
 maVariable <- 10

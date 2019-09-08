@@ -70,7 +70,8 @@ colorlut <- terrain.colors(zlen) # table des couleurs
 col <- colorlut[ g2y-zlim[1]+1 ] # couleur par point
 open3d()
 surface3d(g2x, g2y, g2z, color=col, back="lines")
-snapshot3d("rgl_norm01.png")
+#Pour sauvegarder le graphique enlever le commentaire de la commande ci-dessous
+# snapshot3d("rgl_norm01.png")
 
 #page 32
 # N2(c(0,0),matrix(c(1,0.75,0.75,1),byrow=T,nrow=2))
@@ -85,7 +86,8 @@ colorlut <- terrain.colors(zlen) # table des couleurs
 col <- colorlut[ g2y-zlim[1]+1 ] # couleur par point
 open3d()
 surface3d(g2x, g2y, g2z, color=col, back="lines")
-snapshot3d("rgl_norm02.png")
+#Pour sauvegarder le graphique enlever le commentaire de la commande ci-dessous
+# snapshot3d("rgl_norm02.png")
 
 #page 36
 cor(x,Y(x))

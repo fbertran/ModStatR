@@ -17,7 +17,7 @@ D’après B. Falissard. \emph{Comprendre et utiliser les statistiques dans les 
 vitamines
 }
 \description{
-Influence de diﬀérents régimes alimentaires sur des rats de laboratoire.
+Influence de différents régimes alimentaires sur des rats de laboratoire.
 }
 \details{
 Le gain de poids des rats est désigné par la variable Poids, exprimée en grammes, les deux facteurs sont les variables Calorie et Vitamine. 

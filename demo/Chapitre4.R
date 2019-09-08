@@ -175,6 +175,7 @@ subsetmtcars<-mtcars[,c(1,3,4,5,6,7)]
 
 #page 283
 library(MVN)
+set.seed(1133)
 result1 = mvn(data = subsetmtcars, 
               mvnTest = "mardia", 
               univariateTest = "SW", univariatePlot = "histogram", 
@@ -185,19 +186,257 @@ result1$multivariateNormality
 
 result1$multivariateOutliers
 
-#page 
+#page 284
+library(corrplot); set.seed(1133)
+permmtcars <- perm.cor.mtest(subsetmtcars)
+permmtcars$p<.05/choose(ncol(subsetmtcars),2)
+corrplot(permmtcars$cor,p.mat=permmtcars$p,pch.col="white",insig= 
+           "label_sig",sig.level=.05/choose(ncol(subsetmtcars),2))
 
-#page 
+#page 285
+fit.mtcars<-lm(mpg~.,data=subsetmtcars)
+fit.mtcars
 
-#page 
+shapiro.test(residuals(fit.mtcars))
 
-#page 
+fit2.mtcars<-lm(mpg~.+disp:hp,data=subsetmtcars)
+round(coef(fit2.mtcars), 3)
 
-#page 
+shapiro.test(residuals(fit2.mtcars))
 
-#page 
+covratio(fit2.mtcars)
+dffits(fit2.mtcars)
+dfbetas(fit2.mtcars)
+car::vif(fit2.mtcars)
+perturb::colldiag(fit2.mtcars)
 
-#page 
+#page 286
+plot(fit2.mtcars)
+influence.measures(fit2.mtcars)
+car::influencePlot(fit2.mtcars)
+car::influenceIndexPlot(fit2.mtcars)
+
+summary(fit2.mtcars)
+anova(fit2.mtcars)
+
+if(!require("ISLR")){install.packages("ISLR")}
+library(ISLR)
+data(Hitters)
+if(!require("mice")){install.packages("mice")}
+library(mice)
+md.pattern(Hitters)
+
+#page 260
+md.pairs(Hitters)
+
+library(dplyr)
+if(!require("finalfit")){install.packages("finalfit")}
+library(finalfit)
+Hitters %>% 
+  missing_plot()
+
+explanatory = setdiff(colnames(Hitters),"Salary")
+dependent = "Salary"
+Hitters %>% 
+  missing_pattern(dependent, explanatory)
+
+#page 288
+if(!require("naniar")){install.packages("naniar")}
+library(naniar);library(ggplot2)
+Hitters %>% 
+  bind_shadow() %>% 
+  ggplot(aes(x = Hits, 
+             fill = Salary_NA)) + 
+  geom_density(alpha = 0.5)
+
+#page 289
+gg_miss_var(Hitters)
+try(gg_miss_upset(Hitters))
+
+#page 290
+#Exercice 4.1
+data(anscombe)
+str(anscombe)
+
+#page 291
+#Exercice 4.2
+Hitters = na.omit(Hitters)
+
+#q4
+if(!require(leaps)){install.packages("leaps")}
+library(leaps)
+regfit.full = regsubsets(Salary ~ ., data = Hitters)
+summary(regfit.full)
+regfit19.full = regsubsets(Salary ~ ., data = Hitters, nvmax = 19)
+reg.summary = summary(regfit19.full)
+names(reg.summary)
+plot(reg.summary$cp, xlab = "Number of Variables", ylab = "Cp")
+which.min(reg.summary$cp)
+points(10, reg.summary$cp[10], pch = 20, col = "red")
+plot(regfit19.full, scale = "Cp")
+coef(regfit19.full, 10)
+
+#page 292
+#q5
+regfit.fwd = regsubsets(Salary ~ ., data = Hitters, nvmax = 19, 
+                        method = "forward")
+summary(regfit.fwd)
+plot(regfit.fwd, scale = "Cp")
+
+#q6
+set.seed(314)
+train = sample(seq(263), 180, replace = FALSE)
+regfit.fwd = regsubsets(Salary ~ ., data = Hitters[train, ], 
+                        nvmax = 19, method = "forward", nbest=9)
+n.vars=NULL
+val.errors=NULL
+x.test = model.matrix(Salary ~ ., data = Hitters[-train, ])
+for (i in 1:length(summary(regfit.fwd)$rss)) {
+  coefi = coef(regfit.fwd, id = i)
+  pred = x.test[, names(coefi)] %*% coefi
+  n.vars = c(n.vars,length(names(coefi))-1)
+  val.errors = c(val.errors,mean((Hitters$Salary[-train]-pred)^2))
+}
+
+#page 293
+#q6 (suite)
+mod.ordre=as.numeric(unlist(sapply(table(n.vars), 
+                                   function(x){1:x})))
+plot(n.vars,sqrt(val.errors), ylab ="Root MSE",pch =as.character( 
+  mod.ordre),col=n.vars)
+lines(n.vars[mod.ordre==1],sqrt(val.errors)[mod.ordre==1], 
+      lwd=2,lty=2)
+
+#page 294
+#q7
+predict.regsubsets = function(object, newdata, id, ...) { 
+  form = as.formula(object$call[[2]]) 
+  mat = model.matrix(form, newdata) 
+  coefi = coef(object, id = id) 
+  mat[, names(coefi)] %*% coefi 
+}
+
+#q8
+library(glmnet)
+x=model.matrix(Salary~.-1,data=Hitters)
+y=Hitters$Salary
+lasso_model_cv=cv.glmnet(x,y)
+plot(lasso_model_cv)
+n_best_m=which(lasso_model_cv$lambda==lasso_model_cv$lambda.min)
+lasso_model_cv$glmnet.fit$beta[,n_best_m]
+
+#page 295
+#Exercice 4.3
+#q1
+CancerSein <- read.csv("https://tinyurl.com/y3l6sh59")
+
+#page 297
+#Exercice 4.4
+#q1
+SidaChat <- read.csv("https://tinyurl.com/yxe6yxem")
+
+#page 300
+#Exercice 4.5
+#q1
+Vitamines <- read.csv("https://tinyurl.com/y3shxcsd")
+
+#page 301
+#Exercice 4.6
+#q1
+Beton <- read.csv("https://tinyurl.com/y4w2qv9t")
+
+#page 302
+#Exercice 4.7
+#q1
+chal <- read.csv("https://tinyurl.com/yyb3cztf")
+#q2
+cdplot(as.factor(Defaillance)~Temperature, data=chal, 
+       ylab="Defaillance")
+
+#page 303
+#q3
+chal.glm <- glm(Defaillance~Temperature,data=chal,
+                family="binomial")
+
+if(!require(hnp)){install.packages("hnp")}
+hnp(chal.glm, sim = 99, conf = 0.95)
+
+#page 304
+#q6
+if(!require(rms)){install.packages("rms")}
+library(rms)
+chal.lrm <- lrm(Defaillance~Temperature, data=chal, x=TRUE, y=TRUE)
+print(chal.lrm)
+residuals(chal.lrm, "gof")
+
+#page 305
+#Exercice 4.8
+#q1
+Cypermethrine <- read.csv("https://tinyurl.com/y4deakfd")
+
+#page 306
+#Exercice 4.9
+#q1
+poly <- read.csv("https://tinyurl.com/yyhhcw37")
+
+#q2
+poly_glm1 <- glm(nombre~traitement+age, family=poisson(),data=poly)
+library(hnp)
+hnp(poly_glm1, sim = 99, conf = 0.95)
+summary(poly_glm1)
+confint(poly_glm1)
+poly_glm2 <- glm(nombre~traitement+age, family=quasipoisson(), 
+                 data=poly)
+library(hnp)
+hnp(poly_glm2, sim = 99, conf = 0.95)
+summary(poly_glm2)
+confint(poly_glm2)
+poly_glm3 <- glm.nb(nombre~traitement+age,data=poly)
+library(hnp)
+hnp(poly_glm3, sim = 99, conf = 0.95)
+summary(poly_glm3)
+confint(poly_glm3)
+
+#page 307
+with(poly,plot(nombre~age,type="n",ylab="Nombre de polypes", 
+               xlab="Âge"))
+with(poly,points(age[traitement=="placebo"],fitted(poly_glm2)[ 
+  traitement=="placebo"],pch="P",col="red"))
+xv1<-seq(0,50,.05)
+yv1<-predict(poly_glm2,list(traitement=as.factor(rep("placebo", 
+                                                     length(xv1))),age=xv1))
+lines(xv1,exp(yv1),col="red")
+with(poly,points(age[traitement=="placebo"], 
+                 nombre[traitement=="placebo"],pch="p"))
+with(poly,points(age[traitement=="medicament"],fitted( 
+  poly_glm2)[traitement=="medicament"],pch="D",col="blue"))
+with(poly,points(age[traitement=="medicament"], 
+                 nombre[traitement=="medicament"],pch="d"))
+yv2<-predict(poly_glm2,list(traitement=as.factor(rep("medicament", 
+                                                     length(xv1))),age=xv1))
+lines(xv1,exp(yv2),col="blue")
+
+with(poly,plot(nombre~age,type="n",ylab="Nombre de polypes", 
+               xlab="Âge"))
+with(poly,points(age[traitement=="placebo"],fitted(poly_glm3)[ 
+  traitement=="placebo"],pch="P",col="red"))
+xv1<-seq(0,50,.05)
+yv1<-predict(poly_glm3,list(traitement=as.factor(rep("placebo", 
+                                                     length(xv1))),age=xv1))
+lines(xv1,exp(yv1),col="red")
+with(poly,points(age[traitement=="placebo"], 
+                 nombre[traitement=="placebo"],pch="p"))
+with(poly,points(age[traitement=="medicament"],fitted( 
+  poly_glm3)[traitement=="medicament"],pch="D",col="blue"))
+with(poly,points(age[traitement=="medicament"], 
+                 nombre[traitement=="medicament"],pch="d"))
+yv2<-predict(poly_glm3,list(traitement=as.factor(rep("medicament", 
+                                                     length(xv1))),age=xv1))
+lines(xv1,exp(yv2),col="blue")
+
+
+
+
 
 
 

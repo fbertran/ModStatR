@@ -3,9 +3,7 @@
 \docType{data}
 \name{d_hotels}
 \alias{d_hotels}
-\title{Hotels
-
-Jeu de données hotels (nom des hotels dans la variable NOM).}
+\title{Hotels}
 \format{Un objet \code{data.frame} avec neuf variables et 39 observations :
 \describe{
   \item{NOM}{Factor w/ 39 levels, Nom de l'hôtel}
@@ -22,8 +20,6 @@ Jeu de données hotels (nom des hotels dans la variable NOM).}
 d_hotels
 }
 \description{
-Hotels
-
 Jeu de données hotels (nom des hotels dans la variable NOM).
 }
 \keyword{datasets}

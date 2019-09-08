@@ -17,7 +17,8 @@ Gauss2F1 <- function(a,b,c,x){
   }else{
       Re(hypergeo::hypergeo(c-a,b,c,1-1/(1-x))/(1-x)^b)
   }
-  }
+}
+Gauss2F1<-Vectorize(Gauss2F1, vectorize.args = "x")
 
 #' @title Fonction hypergéométrique de Gauss (gsl)
 #'
@@ -39,6 +40,7 @@ Gauss2F1gsl <- function(a,b,c,x){
     gsl::hyperg_2F1(c-a,b,c,1-1/(1-x))/(1-x)^b
   }
   }
+Gauss2F1gsl<-Vectorize(Gauss2F1gsl, vectorize.args = "x")
 
 #' @title Corrélation de Bravais-Pearson pour bootstrap ou permutation
 #'

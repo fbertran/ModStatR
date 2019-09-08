@@ -20,11 +20,11 @@ resistance
 Jeu de données contenant les résultats d'une expérience évaluant la résistance d'un ciment.
 }
 \details{
-Davies et Goldsmith ont récolté les données d’une expérience dont le but était d’étudier les diﬀérentes sources de variabilité possibles de la résistance d’un ciment fabriqué à Portland. 
-L’expérience s’est déroulée ainsi : plusieurs petits prélèvements d’un même type de ciment ont été mélangés à de l’eau et travaillés par trois personnes diﬀérentes, les « mélangeurs ». On a alors formé douze cubes à l’aide de chacune des préparations des « mélangeurs ». 
+Davies et Goldsmith ont récolté les données d’une expérience dont le but était d’étudier les différentes sources de variabilité possibles de la résistance d’un ciment fabriqué à Portland. 
+L’expérience s’est déroulée ainsi : plusieurs petits prélèvements d’un même type de ciment ont été mélangés à de l’eau et travaillés par trois personnes différentes, les « mélangeurs ». On a alors formé douze cubes à l’aide de chacune des préparations des « mélangeurs ». 
 Puis on a donné ces 36 cubes à trois personnes chargées d’évaluer leur résistance, les « casseurs ». 
 La répartition des 36 cubes entre ces « casseurs » a été faite de telle sorte que chaque « casseur » reçoive quatre cubes provenant de chacune des préparations des « mélangeurs » soit douze cubes au total.
-Tous les tests de résistance ont été faits sur la même machine. L’objectif principal de cette expérience était d’étudier et de quantiﬁer l’importance de la variabilité dans les tests de résistance qui pouvait provenir des diﬀérences individuelles entre les « mélangeurs » et les « casseurs ». 
+Tous les tests de résistance ont été faits sur la même machine. L’objectif principal de cette expérience était d’étudier et de quantifier l’importance de la variabilité dans les tests de résistance qui pouvait provenir des différences individuelles entre les « mélangeurs » et les « casseurs ». 
 Les données ci-dessous, exprimées dans les unités d’origine c’est-à-dire .
 }
 \keyword{datasets}

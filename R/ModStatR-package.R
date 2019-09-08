@@ -1,6 +1,6 @@
-#' ModStatR
+#' @title ModStatR
 #'
-#' Motivation: Package compagnon du livre Modélisation statistique par la pratique avec R. Il contient les codes des chapitres du livre ainsi que les solutions des exercices mais aussi d'autres compléments à découvrir.
+#' @description Motivation: Package compagnon du livre Modélisation statistique par la pratique avec R. Il contient les codes des chapitres du livre ainsi que les solutions des exercices mais aussi d'autres compléments à découvrir.
 #'
 #' @docType package
 #' @name ModStatR

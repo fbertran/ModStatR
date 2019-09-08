@@ -3,9 +3,7 @@
 \docType{data}
 \name{CancerSein}
 \alias{CancerSein}
-\title{Cancer du sein
-
-Jeu de données cancer du sein.}
+\title{Cancer du sein}
 \format{Un objet \code{data.frame} avec trois variables et 62 observations :
 \describe{
   \item{Traitement}{Factor w/ 3 levels, Type de traitement administré}
@@ -19,8 +17,6 @@ Jeu de données cancer du sein.}
 CancerSein
 }
 \description{
-Cancer du sein
-
 Jeu de données cancer du sein.
 }
 \keyword{datasets}
