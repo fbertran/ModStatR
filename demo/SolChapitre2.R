@@ -105,7 +105,7 @@ bbb <- data.frame(bbb)
 
 ccc <- round(bbb, 2)
 ccc <- data.frame(ccc)
-#Pour sauvegarder les jeux de données enlever les commentaires des deux commandes ci-dessous
+#Pour sauvegarder les jeux de donnees enlever les commentaires des deux commandes ci-dessous
 # write.csv(ccc,file="Ecole3.csv",row.names = FALSE)
 # write.csv(ccc[,1:2],file="Ecole2.csv",row.names = FALSE)
 

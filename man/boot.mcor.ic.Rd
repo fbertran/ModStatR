@@ -23,7 +23,7 @@ Intervalles de confiance bootstrap pour une matrice de corrélation de Bravais-P
 data(Mesures5,package="BioStatR")
 Mes5_red_lr = subset(Mesures5[,-5],subset=Mesures5$espece=="laurier rose")
 library(boot)
-boot.mcor <- boot(Mes5_red_lr[,c("masse","taille","masse_sec")], rho.mult, R=10000)
+boot.mcor <- boot(Mes5_red_lr[,c("masse","taille","masse_sec")], rho.mult, R=1000)
 boot.mcor
 boot.mcor.ic.res <- boot.mcor.ic(Mes5_red_lr[,c("masse", "taille","masse_sec")],boot.mcor)
 boot.mcor.ic.res

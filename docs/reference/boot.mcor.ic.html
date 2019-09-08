@@ -183,21 +183,21 @@
     <pre class="examples"><div class='input'><span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/data'>data</a></span>(<span class='no'>Mesures5</span>,<span class='kw'>package</span><span class='kw'>=</span><span class='st'>"BioStatR"</span>)
 <span class='no'>Mes5_red_lr</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/subset'>subset</a></span>(<span class='no'>Mesures5</span>[,-<span class='fl'>5</span>],<span class='kw'>subset</span><span class='kw'>=</span><span class='no'>Mesures5</span>$<span class='no'>espece</span><span class='kw'>==</span><span class='st'>"laurier rose"</span>)
 <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>boot</span>)
-<span class='no'>boot.mcor</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/boot/topics/boot'>boot</a></span>(<span class='no'>Mes5_red_lr</span>[,<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"masse"</span>,<span class='st'>"taille"</span>,<span class='st'>"masse_sec"</span>)], <span class='no'>rho.mult</span>, <span class='kw'>R</span><span class='kw'>=</span><span class='fl'>10000</span>)
+<span class='no'>boot.mcor</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/boot/topics/boot'>boot</a></span>(<span class='no'>Mes5_red_lr</span>[,<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"masse"</span>,<span class='st'>"taille"</span>,<span class='st'>"masse_sec"</span>)], <span class='no'>rho.mult</span>, <span class='kw'>R</span><span class='kw'>=</span><span class='fl'>1000</span>)
 <span class='no'>boot.mcor</span></div><div class='output co'>#&gt; 
 #&gt; ORDINARY NONPARAMETRIC BOOTSTRAP
 #&gt; 
 #&gt; 
 #&gt; Call:
 #&gt; boot(data = Mes5_red_lr[, c("masse", "taille", "masse_sec")], 
-#&gt;     statistic = rho.mult, R = 10000)
+#&gt;     statistic = rho.mult, R = 1000)
 #&gt; 
 #&gt; 
 #&gt; Bootstrap Statistics :
-#&gt;      original       bias    std. error
-#&gt; t1* 0.8407223 -0.001078770  0.02896705
-#&gt; t2* 0.6705079 -0.004763484  0.06854719
-#&gt; t3* 0.4150282 -0.004663795  0.08985777</div><div class='input'><span class='no'>boot.mcor.ic.res</span> <span class='kw'>&lt;-</span> <span class='fu'>boot.mcor.ic</span>(<span class='no'>Mes5_red_lr</span>[,<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"masse"</span>, <span class='st'>"taille"</span>,<span class='st'>"masse_sec"</span>)],<span class='no'>boot.mcor</span>)
+#&gt;      original        bias    std. error
+#&gt; t1* 0.8407223  0.0002719273  0.02902049
+#&gt; t2* 0.6705079 -0.0067273850  0.06751519
+#&gt; t3* 0.4150282 -0.0059770037  0.08885902</div><div class='input'><span class='no'>boot.mcor.ic.res</span> <span class='kw'>&lt;-</span> <span class='fu'>boot.mcor.ic</span>(<span class='no'>Mes5_red_lr</span>[,<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"masse"</span>, <span class='st'>"taille"</span>,<span class='st'>"masse_sec"</span>)],<span class='no'>boot.mcor</span>)
 <span class='no'>boot.mcor.ic.res</span></div><div class='output co'>#&gt; $cor.ic.percentile.low
 #&gt;      [,1] [,2] [,3]
 #&gt; [1,]    1   NA   NA

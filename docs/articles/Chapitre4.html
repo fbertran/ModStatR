@@ -1823,7 +1823,7 @@ hnp(poly_glm3, sim = 99, conf = 0.95)</code></pre>
 ## age               -0.0776086 0.004319903</code></pre>
 <pre class="r"><code>#page 307
 with(poly,plot(nombre~age,type=&quot;n&quot;,ylab=&quot;Nombre de polypes&quot;, 
-               xlab=&quot;Âge&quot;))
+               xlab=&quot;\u00c2ge&quot;))
 with(poly,points(age[traitement==&quot;placebo&quot;],fitted(poly_glm2)[ 
   traitement==&quot;placebo&quot;],pch=&quot;P&quot;,col=&quot;red&quot;))
 xv1&lt;-seq(0,50,.05)
@@ -1841,7 +1841,7 @@ yv2&lt;-predict(poly_glm2,list(traitement=as.factor(rep(&quot;medicament&quot;,
 lines(xv1,exp(yv2),col=&quot;blue&quot;)
 
 with(poly,plot(nombre~age,type=&quot;n&quot;,ylab=&quot;Nombre de polypes&quot;, 
-               xlab=&quot;Âge&quot;))
+               xlab=&quot;\u00c2ge&quot;))
 with(poly,points(age[traitement==&quot;placebo&quot;],fitted(poly_glm3)[ 
   traitement==&quot;placebo&quot;],pch=&quot;P&quot;,col=&quot;red&quot;))
 xv1&lt;-seq(0,50,.05)

@@ -399,7 +399,7 @@ confint(poly_glm3)
 
 #page 307
 with(poly,plot(nombre~age,type="n",ylab="Nombre de polypes", 
-               xlab="Âge"))
+               xlab="\u00c2ge"))
 with(poly,points(age[traitement=="placebo"],fitted(poly_glm2)[ 
   traitement=="placebo"],pch="P",col="red"))
 xv1<-seq(0,50,.05)
@@ -417,7 +417,7 @@ yv2<-predict(poly_glm2,list(traitement=as.factor(rep("medicament",
 lines(xv1,exp(yv2),col="blue")
 
 with(poly,plot(nombre~age,type="n",ylab="Nombre de polypes", 
-               xlab="Âge"))
+               xlab="\u00c2ge"))
 with(poly,points(age[traitement=="placebo"],fitted(poly_glm3)[ 
   traitement=="placebo"],pch="P",col="red"))
 xv1<-seq(0,50,.05)
@@ -433,7 +433,6 @@ with(poly,points(age[traitement=="medicament"],
 yv2<-predict(poly_glm3,list(traitement=as.factor(rep("medicament", 
                                                      length(xv1))),age=xv1))
 lines(xv1,exp(yv2),col="blue")
-
 
 
 
