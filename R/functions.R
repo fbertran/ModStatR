@@ -5,7 +5,7 @@
 #' @param c Paramètre pour Gauss2F1
 #' @param x Argument principal, nombre réel ou complexe
 #'
-#' @return Numeric value
+#' @return Valeur numérique, l'évaluation de la fonction hypergéométrique de Gauss pour les paramètres \code{a}, \code{b}, \code{c} et \code{x}
 #' @export
 #'
 #' @examples
@@ -27,7 +27,7 @@ Gauss2F1<-Vectorize(Gauss2F1, vectorize.args = "x")
 #' @param c Paramètre pour Gauss2F1
 #' @param x Argument principal, nombre réel ou complexe
 #'
-#' @return Numeric value
+#' @return Valeur numérique, l'évaluation de la fonction hypergéométrique de Gauss pour les paramètres \code{a}, \code{b}, \code{c} et \code{x}
 #' @export
 #'
 #' @examples
@@ -48,7 +48,7 @@ Gauss2F1gsl<-Vectorize(Gauss2F1gsl, vectorize.args = "x")
 #' @param y un vecteur numérique
 #' @param indices un vecteur d'indices de même longueur que x et y
 #'
-#' @return Numeric value
+#' @return Valeur numérique, le coefficient de corrélation de Bravais-Pearson calculé pour la permutation des vecteurs \code{x} et \code{y} spécifiée par le vecteur \code{indices}
 #' @export
 #'
 #' @examples
@@ -67,7 +67,7 @@ rho <- function(x, y, indices){
 #' @param rho_0 Valeur de référence pour le coefficient de corrélation de Bravais-Pearson
 #' @param n Effectif de l'échantillon
 #'
-#' @return Numeric value
+#' @return Valeur numérique, densité au point \code{rho} de l'estimateur, construit à partir d'un échantillon de taille \code{n}, du coefficient de corrélation de Bravais-Pearson, de valeur théorique égale à \code{rho0}, sous hypothèse de normalité multivariée
 #' @export
 #'
 #' @examples
@@ -86,7 +86,7 @@ corrdist <- function (rho, rho_0, n) {
 #' @param rho_0 Valeur de référence pour le coefficient de corrélation de Bravais-Pearson
 #' @param n Effectif de l'échantillon
 #'
-#' @return Numeric value
+#' @return Valeur numérique, approximation de la densité au point \code{rho} de l'estimateur, construit à partir d'un échantillon de taille \code{n}, du coefficient de corrélation de Bravais-Pearson, de valeur théorique égale à \code{rho0}, sous hypothèse de normalité multivariée
 #' @export
 #'
 #' @examples
@@ -106,7 +106,7 @@ corrdistapprox <- function (rho, rho_0, n) {
 #' @param rho_0 Valeur de référence pour le coefficient de corrélation de Bravais-Pearson
 #' @param n Effectif de l'échantillon
 #'
-#' @return Numeric value
+#' @return Valeur numérique, approximation de la densité au point \code{rho} de l'estimateur, construit à partir d'un échantillon de taille \code{n}, du coefficient de corrélation de Bravais-Pearson, de valeur théorique égale à \code{rho0}, sous hypothèse de normalité multivariée
 #' @export
 #'
 #' @examples
@@ -131,7 +131,7 @@ corrdistapprox2 <- function (rho, rho_0, n) {
 #' @param rho_0 Valeur de référence pour le coefficient de corrélation de Bravais-Pearson
 #' @param n Effectif de l'échantillon
 #'
-#' @return Numeric value
+#' @return Valeur numérique, p$valeur calculée de manière exacte du test avec la référence \code{rho0} du coefficient de corrélation de Bravais-Pearson sous hypothèse de normalité multivariée
 #' @export
 #'
 #' @examples

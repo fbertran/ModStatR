@@ -14,7 +14,7 @@ corrdist(rho, rho_0, n)
 \item{n}{Effectif de l'échantillon}
 }
 \value{
-Numeric value
+Valeur numérique, densité au point \code{rho} de l'estimateur, construit à partir d'un échantillon de taille \code{n}, du coefficient de corrélation de Bravais-Pearson, de valeur théorique égale à \code{rho0}, sous hypothèse de normalité multivariée
 }
 \description{
 Densité de rho chapeau, estimateur du coefficient de corrélation de Bravais-Pearson

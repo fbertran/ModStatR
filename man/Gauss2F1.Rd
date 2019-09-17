@@ -16,7 +16,7 @@ Gauss2F1(a, b, c, x)
 \item{x}{Argument principal, nombre réel ou complexe}
 }
 \value{
-Numeric value
+Valeur numérique, l'évaluation de la fonction hypergéométrique de Gauss pour les paramètres \code{a}, \code{b}, \code{c} et \code{x}
 }
 \description{
 Fonction hypergéométrique de Gauss (hypergeo)

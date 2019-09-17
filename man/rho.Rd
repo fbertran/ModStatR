@@ -14,7 +14,7 @@ rho(x, y, indices)
 \item{indices}{un vecteur d'indices de même longueur que x et y}
 }
 \value{
-Numeric value
+Valeur numérique, le coefficient de corrélation de Bravais-Pearson calculé pour la permutation des vecteurs \code{x} et \code{y} spécifiée par le vecteur \code{indices}
 }
 \description{
 Corrélation de Bravais-Pearson pour bootstrap ou permutation

@@ -14,7 +14,7 @@ ref.cor.test(corobs, rho_0, n)
 \item{n}{Effectif de l'échantillon}
 }
 \value{
-Numeric value
+Valeur numérique, p$valeur calculée de manière exacte du test avec la référence \code{rho0} du coefficient de corrélation de Bravais-Pearson sous hypothèse de normalité multivariée
 }
 \description{
 Test exact du coefficient de corrélation de Bravais-Pearson avec une référence non nécéssairement nulle
