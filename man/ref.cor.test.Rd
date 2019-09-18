@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{ref.cor.test}
 \alias{ref.cor.test}
-\title{Test exact du coefficient de corrélation de Bravais-Pearson avec une référence non nécéssairement nulle}
+\title{Test exact du coefficient de corrélation de Bravais-Pearson avec une référence non nécessairement nulle}
 \usage{
 ref.cor.test(corobs, rho_0, n)
 }
@@ -17,7 +17,7 @@ ref.cor.test(corobs, rho_0, n)
 Valeur numérique, p$valeur calculée de manière exacte du test avec la référence \code{rho0} du coefficient de corrélation de Bravais-Pearson sous hypothèse de normalité multivariée
 }
 \description{
-Test exact du coefficient de corrélation de Bravais-Pearson avec une référence non nécéssairement nulle
+Test exact du coefficient de corrélation de Bravais-Pearson avec une référence non nécessairement nulle
 }
 \examples{
 ref.cor.test(corobs=.7,rho_0=.8,n=30)

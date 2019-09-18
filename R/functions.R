@@ -125,7 +125,7 @@ corrdistapprox2 <- function (rho, rho_0, n) {
   return(y)
 }
 
-#' @title Test exact du coefficient de corrélation de Bravais-Pearson avec une référence non nécéssairement nulle
+#' @title Test exact du coefficient de corrélation de Bravais-Pearson avec une référence non nécessairement nulle
 #' 
 #' @param corobs Valeur observée du coefficient de corrélation de Bravais-Pearson
 #' @param rho_0 Valeur de référence pour le coefficient de corrélation de Bravais-Pearson
@@ -149,6 +149,42 @@ ref.cor.test <- function(corobs, rho_0, n){
   if(corobs==rho_0){
     return(1)
   }
+}
+
+
+#' @title Test exact matriciel du corrélation de Bravais-Pearson avec une référence non nécessairement nulle
+#' 
+#' @param mat Matrice des données
+#' @param matrho_0 Matrice des valeurs de référence pour chacun des coefficients de corrélation de Bravais-Pearson
+#'
+#' @return Liste comportant trois matrices : la matrice des p-valeurs, la matrice des coefficients de corrélations observés et la matrice des effectifs ayant servis au calcul de ces coefficients de corrélation
+#' @export
+#'
+#' @examples
+#' data(Mesures5,package="BioStatR")
+#' Mes5_red_lr = subset(Mesures5[,-5],subset=Mesures5$espece=="laurier rose")
+#' ref.cor.mtest(Mes5_red_lr[,c("masse","taille","masse_sec")],0.7)
+#' 
+ref.cor.mtest = function (mat, matrho_0) 
+{ 
+  mat <- as.matrix(mat)
+  n <- ncol(mat)
+  if(is.vector(matrho_0) & length(matrho_0)==1){matrho_0= 
+    matrix(matrho_0,nrow=n,ncol=n)} 
+  p.mat <- cor.mat <- nval.mat <- matrix(NA, n, n) 
+  diag(p.mat) <- 0 
+  diag(cor.mat) <- 1 
+  diag(nval.mat) <- colSums(!is.na(mat)) 
+  for (i in 1:(n-1)) { 
+    for (j in (i+1):n) { 
+      cor.mat[i,j] <- cor.mat[j,i] <- cor(x = mat[,i], 
+                                          y = mat[,j],method="pearson",use="pairwise.complete.obs") 
+      nval.mat[i,j]<- nval.mat[j,i]<- nrow(na.omit(mat[,c(i,j)])) 
+      p.mat[i,j]<- p.mat[j,i]<- ref.cor.test(corobs=cor.mat[i,j], 
+                                             rho_0=matrho_0[i,j], n=nval.mat[i,j])
+    }
+  }
+  list(p = p.mat, cor = cor.mat, n=nval.mat)
 }
 
 #' @title Test par permutation d'une matrice de corrélations de Bravais-Pearson
@@ -237,30 +273,22 @@ boot.mcor.ic <- function(mat, boot.mcor.res, conflevel = 0.95){
                                      "perc",conf=conflevel)),ncol=5,byrow=TRUE) 
   bootabc <- matrix(unlist(lapply(1:ncol(mat),indboot.ci,type= 
                                     "bca",conf=conflevel)),ncol=5,byrow=TRUE) 
-  cor.ic.percentile.low=matrix(NA,3,3) 
+  cor.ic.percentile.low=matrix(NA,ncol(mat),ncol(mat)) 
   diag(cor.ic.percentile.low) <- 1 
-  cor.ic.percentile.low[outer(1:ncol(mat),1:ncol(mat),">")]<
-    bootperc[,4] 
-  cor.ic.percentile.low[outer(1:ncol(mat),1:ncol(mat),"<")]<
-    bootperc[,4] 
-  cor.ic.percentile.up=matrix(NA,3,3) 
+  cor.ic.percentile.low[outer(1:ncol(mat),1:ncol(mat),">")]<-bootperc[,4] 
+  cor.ic.percentile.low[outer(1:ncol(mat),1:ncol(mat),"<")]<-bootperc[,4] 
+  cor.ic.percentile.up=matrix(NA,ncol(mat),ncol(mat)) 
   diag(cor.ic.percentile.up) <- 1 
-  cor.ic.percentile.up[outer(1:ncol(mat),1:ncol(mat),">")]<
-    bootperc[,5] 
-  cor.ic.percentile.up[outer(1:ncol(mat),1:ncol(mat),"<")]<
-    bootperc[,5] 
-  cor.ic.BCa.low=matrix(NA,3,3) 
+  cor.ic.percentile.up[outer(1:ncol(mat),1:ncol(mat),">")]<-bootperc[,5] 
+  cor.ic.percentile.up[outer(1:ncol(mat),1:ncol(mat),"<")]<-bootperc[,5] 
+  cor.ic.BCa.low=matrix(NA,ncol(mat),ncol(mat)) 
   diag(cor.ic.BCa.low) <- 1 
-  cor.ic.BCa.low[outer(1:ncol(mat),1:ncol(mat),">")]<
-    bootabc[,4] 
-  cor.ic.BCa.low[outer(1:ncol(mat),1:ncol(mat),"<")]<
-    bootabc[,4] 
-  cor.ic.BCa.up=matrix(NA,3,3) 
+  cor.ic.BCa.low[outer(1:ncol(mat),1:ncol(mat),">")]<-bootabc[,4] 
+  cor.ic.BCa.low[outer(1:ncol(mat),1:ncol(mat),"<")]<-bootabc[,4] 
+  cor.ic.BCa.up=matrix(NA,ncol(mat),ncol(mat)) 
   diag(cor.ic.BCa.up) <- 1 
-  cor.ic.BCa.up[outer(1:ncol(mat),1:ncol(mat),">")]< 
-    bootabc[,5] 
-  cor.ic.BCa.up[outer(1:ncol(mat),1:ncol(mat),"<")]<
-    bootabc[,5] 
+  cor.ic.BCa.up[outer(1:ncol(mat),1:ncol(mat),">")]<- bootabc[,5] 
+  cor.ic.BCa.up[outer(1:ncol(mat),1:ncol(mat),"<")]<-bootabc[,5] 
   return(list(cor.ic.percentile.low=cor.ic.percentile.low, 
               cor.ic.percentile.up=cor.ic.percentile.up,cor.ic.BCa.low= 
                 cor.ic.BCa.low,cor.ic.BCa.up=cor.ic.BCa.up)) 

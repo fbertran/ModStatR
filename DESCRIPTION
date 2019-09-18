@@ -1,8 +1,8 @@
 Package: ModStatR
 Type: Package
 Title: Modélisation Statistique Par La Pratique Avec R
-Version: 1.1.0
-Date: 2019-09-17
+Version: 1.2.0
+Date: 2019-09-18
 Depends: R (>= 3.5.0)
 Imports: stats, boot, ggplot2, BioStatR, jmuOutlier, ellipse, hypergeo, gsl
 Authors@R: c(
