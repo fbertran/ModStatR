@@ -7,7 +7,7 @@
 
 #Chapitre 3 : solution des exercices
 
-#page 227
+#Complement en ligne
 #Exercice 3.1
 d_hotels <- read.csv("https://tinyurl.com/y3rxbxoo")
 head(d_hotels)
@@ -23,13 +23,11 @@ head(d_pres2002[,1:3])
 mosaicplot(d_pres2002, type = "pearson", shade = TRUE, las = 2, 
            main = "Associations et r\u00e9sidus du test du chi2")
 
-#page 228
 d_pres2007 <- read.csv("https://tinyurl.com/yyolq665",row.names=1)
 head(d_pres2007[,1:8])
 mosaicplot(d_pres2007, type = "pearson", shade = TRUE, las = 2, 
            main = "Associations et r\u00e9sidus du test du chi2")
 
-#page 229
 #q1
 data(UCBAdmissions)
 str(UCBAdmissions)
@@ -37,7 +35,6 @@ mosaicplot(UCBAdmissions)
 library(vcd)
 assoc(UCBAdmissions)
 
-#page 230
 #q2
 library(FactoMineR) 
 try(MCA(UCBAdmissions))
@@ -50,10 +47,8 @@ head(UCBA.df)
 
 str(UCBA.df)
 
-#page 231
 MCA(UCBA.df, graph=FALSE)
 
-#page 232
 #Exercice 3.4
 d_wow <- read.csv("https://tinyurl.com/y5gffvsb", row.names =1)
 head(d_wow[,1:3])
@@ -62,7 +57,6 @@ wow.cah.ward <- hclust(d.d_wow, method="ward.D2")
 library(ggdendro)
 ggdendrogram(wow.cah.ward, labels = FALSE)
 
-#page 233
 #Exercice 3.5
 d_hotels <- read.csv("https://tinyurl.com/y3rxbxoo", row.names=1)
 head(d_hotels)

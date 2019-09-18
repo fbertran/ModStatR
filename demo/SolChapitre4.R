@@ -7,7 +7,7 @@
 
 #Chapitre 4 : solution des exercices
 
-#page 308
+#Complement en ligne
 #Exercice 4.4
 #q1
 CancerSein <- read.csv("https://tinyurl.com/y3l6sh59")
@@ -44,7 +44,6 @@ plot(Defaillance~Temperature,data=chal)
 cdplot(as.factor(Defaillance)~Temperature, data=chal, 
        ylab="Defaillance")
 
-#page 309
 #q3
 chal.glm<-glm(Defaillance~Temperature,data=chal,family="binomial")
 if(!require("hnp")){install.packages("hnp")}
@@ -80,7 +79,6 @@ read.csv("https://tinyurl.com/y4w2qv9t")
 #q1
 read.csv("https://tinyurl.com/y4deakfd")
 
-#page 310
 #Exercice 4.10
 #q1
 poly <- read.csv("https://tinyurl.com/yyhhcw37")
