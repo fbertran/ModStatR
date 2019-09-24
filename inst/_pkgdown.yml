@@ -1,3 +1,6 @@
+home:
+  title: "Modélisation statistique par la pratique avec R"
+  description: "Datasets and functions for the book 'Modélisation statistique par la pratique avec R', F. Bertrand, E. Claeys and M. Maumy-Bertrand (2019, ISBN:9782100793525, Dunod, Paris). The first chapter of the book is dedicated to an introduction to the R statistical software. The second chapter deals with correlation analysis: Pearson, Spearman and Kendall simple, muliple and partial correlation coefficients. New wrapper functions for permutation and bootstrap of matrices of correlation tests are provided with the packages. The third chapter is dedicated data axploration with factorial analyses and clustering. The fourth chapter is dedicated to regression analysis: fitting and model diagnostics are detailed. The exercises focus on covariance analysis, logistic regression, analysis of variance for random or mixed models for two models. Various example datasets are shipped with the package: for instance on pokemon, world of warcraft, housetasks or food nutrition analyses."
 navbar:
   title: "ModStatR"
   type: inverse
@@ -29,5 +32,5 @@ navbar:
     - text: "Historique des modifications"
       href: news/index.html
   right:
-    - icon: fa-github
+    - icon: 'fab fa-github'
       href: https://github.com/fbertran/ModStatR

@@ -25,7 +25,9 @@ ggparcoord(d_macdo, columns = 3:ncol(d_macdo), groupColumn=1,
            rows=vars(Category))+ theme(axis.text.x=element_text(angle=45,
            hjust=1,vjust=1),legend.position="top")
 
-if(!require("ggiraphExtra")){install.packages("ggiraphExtra")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("ggiraphExtra")){install.packages("ggiraphExtra")}
 library(ggiraphExtra)
 ggRadar(d_macdo[,-c(2,3)],aes(facet=Category))
 
@@ -158,7 +160,9 @@ plot3d(ellipse3d(cor(cbind(d_macdo.cr_df$Calories,
 
 #page 148
 #q 16
-if(!require("ade4")){install.packages("ade4")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("ade4")){install.packages("ade4")}
 library(ade4)
 list <- setdiff(colnames(d_macdo), c("Category", "Item", 
                                      "Serving.Size"))
@@ -188,7 +192,9 @@ round(cumsum(pve),2)[3:4]
 #page 151
 #q20
 screeplot(macdo.acp)
-if(!require("factoextra")){install.packages("factoextra")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("factoextra")){install.packages("factoextra")}
 library("factoextra")
 fviz_eig(macdo.acp)
 
@@ -276,7 +282,10 @@ s.class(dfxy = macdo.acp$li, fac = d_macdo$Category,
 fviz_pca_biplot(macdo.acp, col.ind ="contrib", col.var ="contrib")
 fviz_pca_biplot(macdo.acp, col.ind = "cos2", col.var = "cos2")
 
-if(!require("adegraphics")){install.packages("adegraphics")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("adegraphics")){install.packages("adegraphics")}
+library(adegraphics)
 list <- setdiff(colnames(d_macdo), c("Category", "Item", 
                                      "Serving.Size"))
 tmp_macdo=list()
@@ -315,7 +324,9 @@ barplot(t(d_vac),beside=TRUE, col = hcl.colors(8, palette =
         list(bg = "white", x = "topleft"))
 
 #page 169
-if(!require(ggpubr)){install.packages("ggpubr")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require(ggpubr)){install.packages("ggpubr")}
 library(ggpubr)
 
 my_cols <- c("#0D0887FF", "#6A00A8FF", "#B12A90FF", 
@@ -345,7 +356,9 @@ mosaicplot(t(d_vac), type = "pearson", shade = TRUE, las = 2,
            main = "Associations et r\u00e9sidus du test du chi2")
 
 #page 172
-if(!require("vcd")){install.packages("vcd")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("vcd")){install.packages("vcd")}
 library(vcd)
 
 d_vactable <- as.table(as.matrix(d_vac))
@@ -355,7 +368,9 @@ labeling_args=list(abbreviate=c(A=TRUE)))
 
 
 #page 173
-if(!require(FactoMineR)){install.packages("FactoMineR")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require(FactoMineR)){install.packages("FactoMineR")}
 library(FactoMineR)
 
 (res.ca.d_vac<-CA(d_vac, ncp=4, graph=FALSE))
@@ -370,11 +385,15 @@ as.numeric(colSums(eig.val)[1])
 sqrt(as.numeric(khi.test.d_vac$statistic)/sum(d_vac)/ 
        (min(nrow(d_vac),ncol(d_vac))-1))
 
-if(!require(questionr)){install.packages("questionr")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require(questionr)){install.packages("questionr")}
 library(questionr)
 cramer.v(d_vac)
 
-if(!require(DescTools)){install.packages("DescTools")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require(DescTools)){install.packages("DescTools")}
 library(DescTools)
 CramerV(d_vac)
 
@@ -393,7 +412,10 @@ idx <- matrix(sample(nrow(d_vac.frm), size=nrow(d_vac.frm) * n,
                      replace=TRUE), ncol=n, byrow=FALSE)
 v <- apply(idx, 2, function(x) CramerV(d_vac.frm[x,1], 
                                        d_vac.frm[x,2]))
-if(!require(lattice)){install.packages("lattice")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require(lattice)){install.packages("lattice")}
+library(lattice)
 lattice::bwplot(v)
 
 quantile(v, probs=c(0.025,0.975))
@@ -456,7 +478,9 @@ barplot(t(d_TM), beside=TRUE, names=d_TM$Task, col = c("red",
         args.legend = list(bg = "white", x = "top"))
 
 #page 184
-if(!require(ggpubr)){install.packages("ggpubr")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require(ggpubr)){install.packages("ggpubr")}
 library(ggpubr)
 my_cols <- c("#0D0887FF", "#6A00A8FF", "#B12A90FF", 
              "#E16462FF", "#FCA636FF", "#F0F921FF")
@@ -469,7 +493,9 @@ table.cont(d_TM)
 sum(d_TM)
 
 #page 185
-if(!require(DescTools)){install.packages("DescTools")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require(DescTools)){install.packages("DescTools")}
 library(DescTools)
 Lambda(d_TM)
 
@@ -577,7 +603,9 @@ scatter(res.acm.poke)
 
 #Analyse factorielle des donnees mixtes
 #page 197
-if(!require("PCAmixdata")){install.packages("PCAmixdata")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("PCAmixdata")){install.packages("PCAmixdata")}
 library(PCAmixdata)
 
 round(cor(poke[,c(7,8,9,10,11)]),2)
@@ -614,7 +642,9 @@ d.data_event <- dist(data_event.c)
 cah.ward <- hclust(d.data_event, method="ward.D2")
 plot(cah.ward, xlab="\u00e9quipe de football", ylab="", 
      main="Dendrogramme", sub="", axes=TRUE, cex=0.5)
-if(!require(ggdendro)){install.packages("ggdendro")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require(ggdendro)){install.packages("ggdendro")}
 library(ggdendro)
 ggdendrogram(cah.ward, rotate = FALSE, size = 2)
 
@@ -637,7 +667,9 @@ fviz_dend(hc.cut, show_labels = TRUE, rect = TRUE)
 fviz_cluster(hc.cut, ellipse.type = "convex",data=d.data_event)
 
 #page 209
-if(!require("vegan")){install.packages("vegan")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("vegan")){install.packages("vegan")}
 library(vegan)
 k.event.cal <- cascadeKM(data_event.c, 3, 10, iter = 100, 
                          criterion = "calinski")

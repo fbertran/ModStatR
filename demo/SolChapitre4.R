@@ -46,7 +46,10 @@ cdplot(as.factor(Defaillance)~Temperature, data=chal,
 
 #q3
 chal.glm<-glm(Defaillance~Temperature,data=chal,family="binomial")
-if(!require("hnp")){install.packages("hnp")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("hnp")){install.packages("hnp")}
+library(hnp)
 hnp(chal.glm, sim = 99, conf = 0.95)
 summary(chal.glm)
 anova(chal.glm,test = "Chisq")
@@ -61,7 +64,9 @@ exp(confint(chal.glm, parm="Temperature"))
 predict(chal.glm,newdata = list(Temperature=31),type = "response")
 
 #q6
-if(!require(rms)){install.packages("rms")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require(rms)){install.packages("rms")}
 library(rms)
 chal.lrm <- lrm(Defaillance~Temperature,data=chal,x=TRUE,y=TRUE)
 print(chal.lrm)

@@ -1,10 +1,9 @@
 ---
+output: github_document
 title: "Modélisation statistique par la pratique avec R"
 author: "Frédéric Bertrand, Emmanuel Claeys et Myriam Maumy-Bertrand"
-output: github_document
----
 
-[![CRAN status](https://www.r-pkg.org/badges/version/ModStatR)](https://cran.r-project.org/package=ModStatR)
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
@@ -20,7 +19,10 @@ knitr::opts_chunk$set(
 ```
 # ModStatR
 
+[![CRAN status](https://www.r-pkg.org/badges/version/ModStatR)](https://cran.r-project.org/package=ModStatR)
+
 Le package ModStatR est un compagnon pour le livre [Modélisation statistique par la pratique avec R](https://www.dunod.com/sciences-techniques/modelisation-statistique-par-pratique-avec-r-cours-et-exercices-corriges).
+
 
 [![ImageLivreModR](https://www.dunod.com/sites/default/files/styles/principal_desktop/public/thumbnails/image/9782100793525-001-X.jpeg)]
 

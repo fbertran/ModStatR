@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 <meta name="author" content="Frédéric Bertrand, Emmanuelle Claeys, Myriam Maumy-Bertrand" />
@@ -269,7 +270,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -343,18 +343,6 @@ summary {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
 
@@ -377,7 +365,7 @@ $(document).ready(function () {
 <h1 class="title toc-ignore">Modélisation statistique par la pratique avec R</h1>
 <h3 class="subtitle">Chapitre 1 : Généralités sur le langage R - solution des exercices</h3>
 <h4 class="author">Frédéric Bertrand, Emmanuelle Claeys, Myriam Maumy-Bertrand</h4>
-<h4 class="date">18 septembre, 2019</h4>
+<h4 class="date">24 septembre, 2019</h4>
 
 </div>
 
@@ -468,7 +456,7 @@ f</code></pre>
 <pre class="r"><code>str(f)</code></pre>
 <pre><code>## function (x)  
 ##  - attr(*, &quot;srcref&quot;)= &#39;srcref&#39; int [1:8] 61 6 61 36 6 36 61 61
-##   ..- attr(*, &quot;srcfile&quot;)=Classes &#39;srcfilecopy&#39;, &#39;srcfile&#39; &lt;environment: 0x7fa3e7830578&gt;</code></pre>
+##   ..- attr(*, &quot;srcfile&quot;)=Classes &#39;srcfilecopy&#39;, &#39;srcfile&#39; &lt;environment: 0x7fd9ff1a03a0&gt;</code></pre>
 <pre class="r"><code># q2
 f(3)</code></pre>
 <pre><code>## [1] 303.75</code></pre>
@@ -508,6 +496,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

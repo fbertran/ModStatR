@@ -21,7 +21,7 @@ with(anscombe,cor(x2,y2))
 with(anscombe,cor(x3,y3))
 with(anscombe,cor(x4,y4))
 
-old.par <- par()
+old.par <- par(no.readonly = TRUE)
 
 par(mar=c(3,3,2,1))
 par(mgp=c(2,1,0))
@@ -37,7 +37,7 @@ with(anscombe,plot(x3,y3,main=substitute(rho(x3,y3) == x,
 with(anscombe,plot(x4,y4,main=substitute(rho(x4,y4) == x, 
      list(x = format(with(anscombe,cor(x4,y4)), digits = 3, nsmall = 3)))))
 
-suppressWarnings(par(old.par))
+par(old.par)
 layout(1)
 
 #page 25
@@ -46,7 +46,9 @@ help(package="mvtnorm")
 dmvnorm(c(0,0), c(0,0), diag(2), log=FALSE)
 
 #page 26
-if(!require("lattice")){install.packages("lattice")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("lattice")){install.packages("lattice")}
 library(lattice)
 # N2(c(0,0),I_2)
 g <- expand.grid(x=seq(-2,2,0.05),y=seq(-2,2,0.05))
@@ -60,7 +62,9 @@ g <- expand.grid(x = seq(-2,2,0.05), y = seq(-2,2,0.05))
 g$z <- dmvnorm(x=cbind(g$x,g$y),mean=c(0,0), sigma=var, log=FALSE)
 wireframe(z ~ x*y, data = g,colorkey = TRUE,drape=TRUE)
 
-if(!require("rgl")){install.packages("rgl")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("rgl")){install.packages("rgl")}
 library(rgl)
 # N2(c(0,0),matrix(c(1,0,0,1),byrow=T,nrow=2))
 g <- expand.grid(x = seq(-4,4,0.05), y = seq(-4,4,0.05))
@@ -98,7 +102,9 @@ surface3d(g2x, g2y, g2z, color=col, back="lines")
 cor(x,Y(x))
 
 #page 32
-if(!require("ModStatR")){install.packages("ModStatR")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("ModStatR")){install.packages("ModStatR")}
 library(ModStatR)
 #La fonction Gauss2F1 a ete integree `a la bibliotheque ModStatR
 ModStatR::Gauss2F1
@@ -128,7 +134,9 @@ for(iii in 1:1000){
                 cor(X,Y)*(1-cor(X,Y)^2)/(length(X)-2))
 }
 
-if(!require("yarrr")){install.packages("yarrr")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("yarrr")){install.packages("yarrr")}
 library(yarrr)
 long_res = cbind(data.frame(res=c(cor_res,cor_sb_res,
   cor_sb_gsl_res,cor_sbapprox_res)),type=rep(1:4,rep(5000,4)))
@@ -144,7 +152,9 @@ mean_res
 all.equal(cor_sb_res, cor_sb_gsl_res)
 
 #page 36
-if(!require("pwr")){install.packages("pwr")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("pwr")){install.packages("pwr")}
 library(pwr)
 pwr.r.test(r=0.30,n=50,sig.level=0.05,alternative="two.sided")
 
@@ -154,7 +164,9 @@ pwr.r.test(r=0.30,n=50,sig.level=0.05,alternative="greater")
 pwr.r.test(r=0.3,power=0.80,sig.level=0.05, alternative="two.sided")
 
 #page 40
-if(!require("BioStatR")){install.packages("BioStatR")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("BioStatR")){install.packages("BioStatR")}
 library(BioStatR)
 data("Quetelet")
 str(Quetelet)
@@ -162,7 +174,9 @@ str(Quetelet)
 table(Quetelet$sexe)
 
 #page 41
-if(!require("GGally")){install.packages("GGally")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("GGally")){install.packages("GGally")}
 library(GGally)
 pairquet <- ggpairs(Quetelet)
 print(pairquet)
@@ -171,7 +185,9 @@ Quet_H <- subset(Quetelet,subset=sexe=="h")
 nrow(Quet_H)
 
 #page 42
-if(!require("MVN")){install.packages("MVN")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("MVN")){install.packages("MVN")}
 library(MVN)
 result = mvn(data = Quet_H[,-1], mvnTest = "mardia",
                univariateTest = "SW", univariatePlot = "histogram",
@@ -220,7 +236,9 @@ tanh(atanh(corobs)-qnorm(.975)/sqrt(41-3))-corobs/(2*(41-1))
 tanh(atanh(corobs)+qnorm(.975)/sqrt(41-3))-corobs/(2*(41-1))
 
 #page 47
-if(!require("MBESS")){install.packages("MBESS")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("MBESS")){install.packages("MBESS")}
 library(MBESS)
 ci.R(corobs,1,41-2)
 
@@ -233,7 +251,9 @@ sqrt(41-2)*corobs/sqrt(1-corobs^2)
 #La fonction rho est disponible dans le package ModStatR
 ModStatR::rho
 
-if(!require("boot")){install.packages("boot")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("boot")){install.packages("boot")}
 library(boot)
 boot.rho_H <- boot(Quet_H[,"poids"], y=Quet_H[,"taille"], rho,
                     R=10000)
@@ -254,7 +274,9 @@ sqrt(n-3)*(atanh(corobs)-atanh(rho_0)-rho_0/(2*(n-1)))
                             atanh(rho_0)-rho_0/(2*(n-1))))))
 
 #page 50
-if(!require("ModStatR")){install.packages("ModStatR")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("ModStatR")){install.packages("ModStatR")}
 library(ModStatR)
 #La fonction corrdist est disponible dans le package ModStatR
 ModStatR::corrdist
@@ -289,13 +311,17 @@ ref.cor.test(corobs=corobs,rho_0=rho_0,n=n)
 Quet_F <- subset(Quetelet,subset=sexe=="f")
 nrow(Quet_F)
 
-if(!require("jmuOutlier")){install.packages("jmuOutlier")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("jmuOutlier")){install.packages("jmuOutlier")}
 library(jmuOutlier)
 set.seed(1133)
 perm.cor.test(Quet_F[,"poids"],Quet_F[,"taille"])
 
 #page 53
-if(!require("boot")){install.packages("boot")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("boot")){install.packages("boot")}
 library(boot)
 boot.rho_F <- boot(Quet_F[,"poids"], y=Quet_F[,"taille"], rho,
                      R=10000)
@@ -309,7 +335,9 @@ petit_ech <- rmvnorm(n=8, mean=c(1,2), sigma=sigma)
 petit_ech
 cor(petit_ech[,1],petit_ech[,2])
 
-if(!require("combinat")){install.packages("combinat")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("combinat")){install.packages("combinat")}
 library(combinat)
 spcor <- sapply(permn(petit_ech[,1]), y=petit_ech[,2], 
                 method="pearson", cor)
@@ -370,7 +398,9 @@ MatCov/matsisj
 cor(Mes5_red_gv)
 
 Matcor = cor(Mes5_red_gv)
-if(!require("corrplot")){install.packages("corrplot")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("corrplot")){install.packages("corrplot")}
 library(corrplot)
 corrplot(Matcor)
 
@@ -410,7 +440,9 @@ corrplot(Matcor, method="pie", diag=FALSE, addCoef.col="orange")
 corrplot(Matcor, method="pie", diag=FALSE, addCoef.col="orange", 
          number.cex=.75)
 
-if(!require("RColorBrewer")){install.packages("RColorBrewer")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("RColorBrewer")){install.packages("RColorBrewer")}
 library(RColorBrewer)
 corrplot(Matcor, method="pie", diag=FALSE, col=brewer.pal(n=8, 
     name="PuOr"))
@@ -418,7 +450,9 @@ corrplot(Matcor, method="pie", diag=FALSE, col=brewer.pal(n=8,
 #page 63
 corrplot(Matcor, method="pie", diag=FALSE, tl.srt=45)
 
-if(!require("ggcorrplot")){install.packages("ggcorrplot")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("ggcorrplot")){install.packages("ggcorrplot")}
 library(ggcorrplot)
 ggcorrplot(Matcor)
 ggcorrplot(Matcor, method="circle", type ="lower")
@@ -639,7 +673,9 @@ m.cov = rbind(c(3,1,1,0), c(1,3,0,1), c(1,0,2,0), c(0,1,0,2))
 m.cor.1 = cov2cor(m.cov)
 m.cor.1
 
-if(!require("corpcor")){install.packages("corpcor")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("corpcor")){install.packages("corpcor")}
 library("corpcor")
 m.pcor.1 = cor2pcor(m.cor.1)
 m.pcor.1
@@ -702,7 +738,9 @@ corTriplet
 
 cor2pcor(sigmaTriplet)
 
-if(!require("ppcor")){install.packages("ppcor")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("ppcor")){install.packages("ppcor")}
 library(ppcor)
 pcor(Mes5_red_lr_noNA)$estimate
 
@@ -764,18 +802,24 @@ cor_spear
 #page 112
 cor.test(petit_ech[,1],petit_ech[,2],method="spearman")
 
-if(!require(pspearman)){install.packages("pspearman")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require(pspearman)){install.packages("pspearman")}
 library(pspearman)
 spearman.test(petit_ech[,1],petit_ech[,2])
 
 2*pspearman(10, 8)
 
 #page 113
-if(!require(SuppDists)){install.packages("SuppDists")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require(SuppDists)){install.packages("SuppDists")}
 library(SuppDists)
 2*pSpearman(cor_spear[2,1], 8, lower.tail = FALSE)
 
-if(!require(coin)){install.packages("coin")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require(coin)){install.packages("coin")}
 library(coin)
 spearman_test(petit_ech[,1]~petit_ech[,2],distribution= 
                 approximate(nresample=99999))
@@ -826,7 +870,9 @@ if(!require(Kendall)){install.packages(Kendall)}
 library(Kendall)
 Kendall(petit_ech[,1],petit_ech[,2])
 
-if(!require(SuppDists)){install.packages("SuppDists")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require(SuppDists)){install.packages("SuppDists")}
 library(SuppDists)
 2*pKendall(cor_kend[2,1], 8, lower.tail = FALSE)
 

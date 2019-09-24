@@ -8,14 +8,18 @@
 #Chapitre 4
 
 #page 248
-if(!require("BioStatR")){install.packages("BioStatR")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("BioStatR")){install.packages("BioStatR")}
 library(BioStatR)
 str(Mesures)
 
 summary(Mesures)
 
 #page 249
-if(!require("ISLR")){install.packages("ISLR")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("ISLR")){install.packages("ISLR")}
 library(ISLR)
 summary(Hitters[,17:20])
 
@@ -30,7 +34,9 @@ round(fitted(model), 2)
 
 round(residuals(model), 2)
 
-if(!require("broom")){install.packages("broom")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("broom")){install.packages("broom")}
 library(broom)
 (model.diag.metrics<-augment(model))
 
@@ -50,7 +56,9 @@ legend("topleft",lty=c(1,2,4),legend = c("lm","lowess",
                                          "smooth.spline"),lwd=2,col=c("red","blue","orange"))
 
 #page 253
-if(!require("ggiraphExtra")){install.packages("ggiraphExtra")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("ggiraphExtra")){install.packages("ggiraphExtra")}
 library(ggiraphExtra)
 ggPredict(model)
 
@@ -226,10 +234,14 @@ influenceIndexPlot(fit2.mtcars)
 summary(fit2.mtcars)
 anova(fit2.mtcars)
 
-if(!require("ISLR")){install.packages("ISLR")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("ISLR")){install.packages("ISLR")}
 library(ISLR)
 data(Hitters)
-if(!require("mice")){install.packages("mice")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("mice")){install.packages("mice")}
 library(mice)
 md.pattern(Hitters)
 
@@ -237,7 +249,9 @@ md.pattern(Hitters)
 md.pairs(Hitters)
 
 library(dplyr)
-if(!require("finalfit")){install.packages("finalfit")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("finalfit")){install.packages("finalfit")}
 library(finalfit)
 Hitters %>% 
   missing_plot()
@@ -248,7 +262,9 @@ Hitters %>%
   missing_pattern(dependent, explanatory)
 
 #page 270
-if(!require("naniar")){install.packages("naniar")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require("naniar")){install.packages("naniar")}
 library(naniar);library(ggplot2)
 Hitters %>% 
   bind_shadow() %>% 
@@ -270,7 +286,9 @@ str(anscombe)
 Hitters = na.omit(Hitters)
 
 #q4
-if(!require(leaps)){install.packages("leaps")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require(leaps)){install.packages("leaps")}
 library(leaps)
 regfit.full = regsubsets(Salary ~ ., data = Hitters)
 summary(regfit.full)
@@ -365,12 +383,17 @@ cdplot(as.factor(Defaillance)~Temperature, data=chal,
 chal.glm <- glm(Defaillance~Temperature,data=chal,
                 family="binomial")
 
-if(!require(hnp)){install.packages("hnp")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require(hnp)){install.packages("hnp")}
+library(hnp)
 hnp(chal.glm, sim = 99, conf = 0.95)
 
 #page 286
 #q6
-if(!require(rms)){install.packages("rms")}
+#Si le package n'est pas installe, enlever le commentaire
+#puis executer la commande ci-dessous.
+#if(!require(rms)){install.packages("rms")}
 library(rms)
 chal.lrm <- lrm(Defaillance~Temperature, data=chal, x=TRUE, y=TRUE)
 print(chal.lrm)
