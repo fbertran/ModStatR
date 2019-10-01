@@ -8,6 +8,7 @@ Frédéric Bertrand, Emmanuel Claeys et Myriam Maumy-Bertrand
 
 [![CRAN
 status](https://www.r-pkg.org/badges/version/ModStatR)](https://cran.r-project.org/package=ModStatR)
+[![DOI](https://zenodo.org/badge/204068588.svg)](https://zenodo.org/badge/latestdoi/204068588)
 
 Le package ModStatR est un compagnon pour le livre [Modélisation
 statistique par la pratique avec

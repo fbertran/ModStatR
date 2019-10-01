@@ -20,6 +20,7 @@ knitr::opts_chunk$set(
 # ModStatR
 
 [![CRAN status](https://www.r-pkg.org/badges/version/ModStatR)](https://cran.r-project.org/package=ModStatR)
+[![DOI](https://zenodo.org/badge/204068588.svg)](https://zenodo.org/badge/latestdoi/204068588)
 
 Le package ModStatR est un compagnon pour le livre [Modélisation statistique par la pratique avec R](https://www.dunod.com/sciences-techniques/modelisation-statistique-par-pratique-avec-r-cours-et-exercices-corriges).
 
