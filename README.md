@@ -42,19 +42,19 @@ devtools::install_github("fbertran/ModStatR")
 
 ## Code et résultats
 
-* [Code et résultats du chapitre *1*](articles/Chapitre1.html)
-* [Code et résultats du chapitre *2*](articles/Chapitre2.html)
-* [Code et résultats du chapitre *3*](articles/Chapitre3.html)
-* [Code et résultats du chapitre *4*](articles/Chapitre4.html)
+* [Code et résultats du chapitre *1*](docs/articles/Chapitre1.html)
+* [Code et résultats du chapitre *2*](docs/articles/Chapitre2.html)
+* [Code et résultats du chapitre *3*](docs/articles/Chapitre3.html)
+* [Code et résultats du chapitre *4*](docs/articles/Chapitre4.html)
 
 Les sorties et le code de chaque chapitre sont également accessibles à l'aide de l'onglet "Code du livre".
 
 ## Solutions des exercices
 
-* [Code et résultats du chapitre *1*](articles/SolChapitre1.html)
-* [Code et résultats du chapitre *2*](articles/SolChapitre2.html)
-* [Code et résultats du chapitre *3*](articles/SolChapitre3.html)
-* [Code et résultats du chapitre *4*](articles/SolChapitre4.html)
+* [Code et résultats du chapitre *1*](docs/articles/SolChapitre1.html)
+* [Code et résultats du chapitre *2*](docs/articles/SolChapitre2.html)
+* [Code et résultats du chapitre *3*](docs/articles/SolChapitre3.html)
+* [Code et résultats du chapitre *4*](docs/articles/SolChapitre4.html)
 
 Les solutions des exercices de chaque chapitre sont également accessibles à l'aide de l'onglet "Solutions des exercices".
 
