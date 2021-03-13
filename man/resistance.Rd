@@ -4,12 +4,14 @@
 \name{resistance}
 \alias{resistance}
 \title{Résistance d'un ciment}
-\format{Un objet \code{data.frame} avec 36 lignes et 3 variables :
+\format{
+Un objet \code{data.frame} avec 36 lignes et 3 variables :
 \describe{
   \item{\code{Melangeur}}{Factor w/ 3, COLUMN_DESCRIPTION}
   \item{\code{Casseur}}{Factor w/ 3, COLUMN_DESCRIPTION}
   \item{\code{Resistance}}{Integer vector, résistance en livres par pouces carrés} 
-}}
+}
+}
 \source{
 Davies, O.L. et Goldsmith, P.L. (Eds.), \emph{Statistical Methods in Research and Production}, 4th edition, Oliver and Boyd, Edinburgh, 1972.
 }

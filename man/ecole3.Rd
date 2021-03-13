@@ -4,12 +4,14 @@
 \name{ecole3}
 \alias{ecole3}
 \title{Jeu de données école (3 variables)}
-\format{Un objet \code{data.frame} avec 119 lignes et 3 variables :
+\format{
+Un objet \code{data.frame} avec 119 lignes et 3 variables :
 \describe{
   \item{\code{Maths}}{Numerical vector, Note en mathématiques}
   \item{\code{Sport}}{Numerical vector, Note en sport}
   \item{\code{Age}}{Numerical vector, Âge de l'élève} 
-}}
+}
+}
 \usage{
 ecole3
 }

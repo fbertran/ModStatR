@@ -4,13 +4,15 @@
 \name{d_TM}
 \alias{d_TM}
 \title{Tâches ménagènes}
-\format{Un objet \code{data.frame} avec 13 lignes et 4 variables :
+\format{
+Un objet \code{data.frame} avec 13 lignes et 4 variables :
 \describe{
   \item{\code{Wife}}{Integer vector, Nombre de fois que la tâche est réalisée exclusivement par une femme}
   \item{\code{Alternating}}{Integer vector, Nombre de fois que la tâche est réalisée alternativement par une femme et un homme}
   \item{\code{Husband}}{Integer vector, Nombre de fois que la tâche est réalisée exclusivement par un homme}
   \item{\code{Jointly}}{Integer vector, Nombre de fois que la tâche est réalisée en même temps par une femme et un homme} 
-}}
+}
+}
 \usage{
 d_TM
 }

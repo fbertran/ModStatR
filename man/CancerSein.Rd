@@ -4,12 +4,14 @@
 \name{CancerSein}
 \alias{CancerSein}
 \title{Cancer du sein}
-\format{Un objet \code{data.frame} avec trois variables et 62 observations :
+\format{
+Un objet \code{data.frame} avec trois variables et 62 observations :
 \describe{
   \item{Traitement}{Factor w/ 3 levels, Type de traitement administré}
   \item{Age}{Numerical vector, Âge de la patiente au début du traitement}
   \item{Survie}{Numerical vector, Durée de survie de la patiente}
-}}
+}
+}
 \source{
 \emph{Modèle linéaire : Comparaison de groupes et régression} de B. Prum aux Éditions de l’INSERM, 1996.
 }

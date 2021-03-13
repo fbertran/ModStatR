@@ -4,7 +4,8 @@
 \name{d_hotels_n}
 \alias{d_hotels_n}
 \title{Hotels}
-\format{Un objet \code{data.frame} avec huit variables et 39 observations :
+\format{
+Un objet \code{data.frame} avec huit variables et 39 observations :
 \describe{
   \item{PAYS}{Factor w/ 5 levels, Pays où est situé l'hôtel}
   \item{ETOILE}{Integer vector, Catégorie de l'hôtel}
@@ -14,7 +15,8 @@
   \item{SPORT}{Integer vector, Note des instructures sprotives}
   \item{PLAGE}{Integer vector, Note de la plage}
   \item{PRIX}{Integer vector, Prix moyen pour une nuit}
-}}
+}
+}
 \usage{
 d_hotels_n
 }

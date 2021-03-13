@@ -4,7 +4,8 @@
 \name{d_wow}
 \alias{d_wow}
 \title{Zones de World of Warcraft}
-\format{Un objet \code{data.frame} avec 160 lignes et 12 variables :
+\format{
+Un objet \code{data.frame} avec 160 lignes et 12 variables :
 \describe{
   \item{\code{Continent}}{Factor w/ 7 levels, Nom du continent}
   \item{\code{Area}}{Factor w/ 12 levels, Nom de la région}
@@ -18,7 +19,8 @@
   \item{\code{Max_rec_level}}{Integer vector, Niveau maximum recommandé pour s'aventurer dans la zone}
   \item{\code{Min_bot_level}}{Integer vector, Niveau minimum pour pouvoir utiliser un bot dans la zone}
   \item{\code{Max_bot_level}}{Integer vector, Niveau maximum pour pouvoir utiliser un bot dans la zone} 
-}}
+}
+}
 \source{
 Kaggle.
 }

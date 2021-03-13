@@ -4,7 +4,8 @@
 \name{poke}
 \alias{poke}
 \title{Pokemons}
-\format{Un objet \code{data.frame} avec 800 lignes et 13 variables :
+\format{
+Un objet \code{data.frame} avec 800 lignes et 13 variables :
 \describe{
   \item{\code{X.}}{Integer vector, PokeDex index number}
   \item{\code{Name}}{Factor w/ 800 levels, Name of the Pokemon}
@@ -19,7 +20,8 @@
   \item{\code{Speed}}{ Speed}
   \item{\code{Generation}}{Integer vector, Number of generation}
   \item{\code{Legendary}}{Factor w/ 2 levels, True if Legendary Pokemon False if not (more revision on mythical vs legendary needed)} 
-}}
+}
+}
 \source{
 Kaggle.
 }

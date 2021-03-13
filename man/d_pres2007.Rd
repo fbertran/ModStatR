@@ -4,7 +4,8 @@
 \name{d_pres2007}
 \alias{d_pres2007}
 \title{Elections presidentielles 2007 : premier tour}
-\format{Un objet \code{data.frame} avec 12 variables et 23 observations :
+\format{
+Un objet \code{data.frame} avec 12 variables et 23 observations :
 \describe{
   \item{Sarkozy}{Integer vector, Nombre de votes par région}
   \item{Bayrou}{Integer vector, Nombre de votes par région}
@@ -18,7 +19,8 @@
   \item{Buffet}{Integer vector, Nombre de votes par région}
   \item{Nihous}{Integer vector, Nombre de votes par région}
   \item{Schivardi}{Integer vector, Nombre de votes par région}
-}}
+}
+}
 \usage{
 d_pres2007
 }

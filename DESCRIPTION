@@ -5,7 +5,7 @@ Version: 1.3.1
 Date: 2021-03-13
 Depends: R (>= 3.5.0)
 Imports: stats, boot, jmuOutlier, ellipse, hypergeo, gsl
-SUggests: BioStatR, ggplot2
+Suggests: BioStatR, ggplot2
 Authors@R: c(
 	person(given = "Frederic", family= "Bertrand", role = c("cre", "aut"), email = "frederic.bertrand@math.unistra.fr", comment = c(ORCID = "0000-0002-0837-8281")),
 	person(given = "Emmanuelle", family= "Claeys", role = c("aut"), email = "emmanuelle.claeys@unistra.fr"),
@@ -18,6 +18,6 @@ LazyData: yes
 License: GPL-3
 Encoding: UTF-8
 Classification/MSC:
-URL: http://www-irma.u-strasbg.fr/~fbertran/, https://github.com/fbertran/ModStatR
-BugReports: https://github.com/fbertran/ModStatR/issues
-RoxygenNote: 6.1.1
+URL: http://www-irma.u-strasbg.fr/~fbertran/, https://github.com/fbertran/ModStatR/
+BugReports: https://github.com/fbertran/ModStatR/issues/
+RoxygenNote: 7.1.1

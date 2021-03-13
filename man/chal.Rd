@@ -4,11 +4,13 @@
 \name{chal}
 \alias{chal}
 \title{Challenger}
-\format{Un objet \code{data.frame} avec deux variables et 24 observations :
+\format{
+Un objet \code{data.frame} avec deux variables et 24 observations :
 \describe{
   \item{Temperature}{Integer vector, Température au moment du décollage}
   \item{Defaillance}{Integer vector, Défaillance de l'un des \emph{o-ring}}
-}}
+}
+}
 \usage{
 chal
 }

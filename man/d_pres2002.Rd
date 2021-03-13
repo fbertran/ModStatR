@@ -4,7 +4,8 @@
 \name{d_pres2002}
 \alias{d_pres2002}
 \title{Elections presidentielles 2002 : premier tour}
-\format{Un objet \code{data.frame} avec 12 variables et 8 observations :
+\format{
+Un objet \code{data.frame} avec 12 variables et 8 observations :
 \describe{
   \item{Arlette.Laguiller}{Integer vector, Nombre de votes par région}
   \item{Dominique.Voynet}{Integer vector, Nombre de votes par région}
@@ -18,7 +19,8 @@
   \item{Olivier.Besancenot}{Integer vector, Nombre de votes par région}
   \item{Philippe.de.Villiers}{Integer vector, Nombre de votes par région}
   \item{Ségolène.Royal}{Integer vector, Nombre de votes par région}
-}}
+}
+}
 \usage{
 d_pres2002
 }

@@ -4,8 +4,13 @@
 \alias{perm.cor.mtest}
 \title{Test par permutation d'une matrice de corrélations de Bravais-Pearson}
 \usage{
-perm.cor.mtest(mat, alternative = "two.sided", method = "pearson",
-  num.sim = 20000, ...)
+perm.cor.mtest(
+  mat,
+  alternative = "two.sided",
+  method = "pearson",
+  num.sim = 20000,
+  ...
+)
 }
 \arguments{
 \item{mat}{Matrice des données}

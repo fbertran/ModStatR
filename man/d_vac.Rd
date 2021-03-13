@@ -4,7 +4,8 @@
 \name{d_vac}
 \alias{d_vac}
 \title{Lieux de vacances et occupation}
-\format{Un objet \code{data.frame} avec 8 lignes et 8 variables :
+\format{
+Un objet \code{data.frame} avec 8 lignes et 8 variables :
 \describe{
   \item{\code{Hotel}}{Integer vector, Séjour à l'hotel}
   \item{\code{Location}}{Integer vector, Séjour en location}
@@ -14,7 +15,8 @@
   \item{\code{Camping}}{Integer vector, Séjour au camping}
   \item{\code{Sej.org}}{Integer vector, Séjour organisé}
   \item{\code{Autres}}{Integer vector, Autres} 
-}}
+}
+}
 \usage{
 d_vac
 }

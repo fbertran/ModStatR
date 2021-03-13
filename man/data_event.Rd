@@ -4,7 +4,8 @@
 \name{data_event}
 \alias{data_event}
 \title{Matchs de football joués en France de 2011/2012 à 2016/2017}
-\format{Un objet \code{data.frame} avec 208446 lignes et 40 variables :
+\format{
+Un objet \code{data.frame} avec 208446 lignes et 40 variables :
 \describe{
   \item{\code{X}}{Integer vector, identifiant unique de ligne}
   \item{\code{id_odsp}}{Factor w/ 2076 levels, identifiant unique de match}
@@ -46,7 +47,8 @@
   \item{\code{odd_under}}{Numerical vector, highest under 2.5 market odds}
   \item{\code{odd_bts}}{Numerical vector, highest both teams to score market odds}
   \item{\code{odd_bts_n}}{Numerical vector, highest both teams NOT to score market odds} 
-}}
+}
+}
 \source{
 Kaggle.
 }

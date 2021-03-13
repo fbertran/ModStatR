@@ -4,13 +4,15 @@
 \name{parasites}
 \alias{parasites}
 \title{Parasites}
-\format{Un objet \code{data.frame} avec 12 lignes et 4 variables :
+\format{
+Un objet \code{data.frame} avec 12 lignes et 4 variables :
 \describe{
   \item{\code{Total}}{Integer vector, Nombre total de parasites}
   \item{\code{N.morts}}{Integer vector, Nombre de parasites morts}
   \item{\code{Niveau.de.dose}}{Integer vector, Niveau de dose utilisé}
   \item{\code{Sexe}}{Factor w/ 2 levels, Sexe de l'hôte} 
-}}
+}
+}
 \usage{
 parasites
 }

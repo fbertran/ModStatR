@@ -4,12 +4,14 @@
 \name{vitamines}
 \alias{vitamines}
 \title{Vitamines}
-\format{Un objet \code{data.frame} avec 32 lignes et 3 variables :
+\format{
+Un objet \code{data.frame} avec 32 lignes et 3 variables :
 \describe{
   \item{\code{Calorie}}{Integer vector, COLUMN_DESCRIPTION}
   \item{\code{Vitamine}}{Integer vector, COLUMN_DESCRIPTION}
   \item{\code{Poids}}{Integer vector, COLUMN_DESCRIPTION} 
-}}
+}
+}
 \source{
 D’après B. Falissard. \emph{Comprendre et utiliser les statistiques dans les sciences de la vie}. Masson, 2005.
 }

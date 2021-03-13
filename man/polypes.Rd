@@ -4,12 +4,14 @@
 \name{polypes}
 \alias{polypes}
 \title{Polypes}
-\format{Un objet \code{data.frame} avec 20 lignes et 3 variables :
+\format{
+Un objet \code{data.frame} avec 20 lignes et 3 variables :
 \describe{
   \item{\code{nombre}}{Integer vector, Nombre de polypes après 12 mois}
   \item{\code{traitement}}{Factor w/ 2 levels, Bras de l'essai, un facteur avec deux niveaux placebo et medicament}
   \item{\code{age}}{Integer vector, Âge du patient} 
-}}
+}
+}
 \source{
 M. Giardiello, S. R. Hamilton, A. J. Krush, S. Piantadosi, L. M. Hylind, P. Celano, S. V. Booker, C. R. Robinson and G. J. A. Offerhaus (1993), Treatment of colonic and rectal adenomas with sulindac in familial adenomatous polyposis. New England Journal of Medicine, 328(18), 1313–1316.
 S. Piantadosi (1997), Clinical Trials: A Methodologic Perspective. John Wiley \& Sons, New York.

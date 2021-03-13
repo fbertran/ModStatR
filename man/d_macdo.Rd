@@ -4,7 +4,8 @@
 \name{d_macdo}
 \alias{d_macdo}
 \title{MacDonald}
-\format{Un objet \code{data.frame} avec 24 variables et 260 observations :
+\format{
+Un objet \code{data.frame} avec 24 variables et 260 observations :
 \describe{
   \item{Category}{Factor w/ 9 levels, Type d'aliment}
   \item{Item}{Factor w/ 260 levels, Nom de l'aliment}
@@ -30,7 +31,8 @@
   \item{Vitamin.C....Daily.Value.}{Integer vector, \% de la quantité de vitamine C attendue par jour}
   \item{Calcium....Daily.Value.}{Integer vector, \% de la quantité de calcium attendue par jour}
   \item{Iron....Daily.Value.}{Integer vector, \% de la quantité de fer attendue par jour}
-}}
+}
+}
 \source{
 Kaggle.
 }

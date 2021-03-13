@@ -1,4 +1,7 @@
 genlogo.R
+^_pkgdown\.yml$
+^figure$
+^pkgdown$
 ^Meta$
 ^doc$
 #All packages
