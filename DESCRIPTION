@@ -18,6 +18,6 @@ LazyData: yes
 License: GPL-3
 Encoding: UTF-8
 Classification/MSC:
-URL: http://www-irma.u-strasbg.fr/~fbertran/, https://github.com/fbertran/ModStatR/
+URL: https://fbertran.github.io/homepage/, https://github.com/fbertran/ModStatR/
 BugReports: https://github.com/fbertran/ModStatR/issues/
 RoxygenNote: 7.1.1
