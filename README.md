@@ -7,13 +7,13 @@
 ## Frédéric Bertrand, Emmanuel Claeys et Myriam Maumy-Bertrand
 
 <!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://www.tidyverse.org/lifecycle/#stable)
+[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![R-CMD-check](https://github.com/fbertran/ModStatR/workflows/R-CMD-check/badge.svg)](https://github.com/fbertran/ModStatR/actions)
 [![Codecov test coverage](https://codecov.io/gh/fbertran/ModStatR/branch/master/graph/badge.svg)](https://codecov.io/gh/fbertran/ModStatR?branch=master)
 [![CRAN status](https://www.r-pkg.org/badges/version/ModStatR)](https://cran.r-project.org/package=ModStatR)
 [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/ModStatR)](https://cran.r-project.org/package=ModStatR)
-[![GitHub Repo stars](https://img.shields.io/github/stars/fbertran/ModStatR?style=social)](https://github.com/github/fbertran/)
+[![GitHub Repo stars](https://img.shields.io/github/stars/fbertran/ModStatR?style=social)](https://github.com/fbertran/ModStatR/)
 [![DOI](https://zenodo.org/badge/204068588.svg)](https://zenodo.org/badge/latestdoi/204068588)
 <!-- badges: end -->
 
