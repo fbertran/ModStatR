@@ -1,3 +1,11 @@
+# ModStatR 1.3.2
+
+* Maintainer address update
+
+# ModStatR 1.3.1
+
+* Update internet links
+
 # ModStatR 1.3.0
 
 * Code modification, English title and enhanced description as requested by CRAN.

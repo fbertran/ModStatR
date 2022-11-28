@@ -334,7 +334,7 @@
 #'   \item{\code{age}}{Integer vector, Âge du patient} 
 #'}
 #' @source M. Giardiello, S. R. Hamilton, A. J. Krush, S. Piantadosi, L. M. Hylind, P. Celano, S. V. Booker, C. R. Robinson and G. J. A. Offerhaus (1993), Treatment of colonic and rectal adenomas with sulindac in familial adenomatous polyposis. New England Journal of Medicine, 328(18), 1313–1316.
-#' S. Piantadosi (1997), Clinical Trials: A Methodologic Perspective. John Wiley \& Sons, New York.
+#' S. Piantadosi (1997), Clinical Trials: A Methodologic Perspective. John Wiley and Sons, New York.
 "polypes"
 #> [1] "polypes"
 

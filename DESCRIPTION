@@ -1,17 +1,17 @@
 Package: ModStatR
 Type: Package
 Title: Statistical Modelling in Action with R
-Version: 1.3.1
-Date: 2021-03-13
+Version: 1.3.2
+Date: 2022-11-28
 Depends: R (>= 3.5.0)
 Imports: stats, boot, jmuOutlier, ellipse, hypergeo, gsl
 Suggests: BioStatR, ggplot2
 Authors@R: c(
-	person(given = "Frederic", family= "Bertrand", role = c("cre", "aut"), email = "frederic.bertrand@math.unistra.fr", comment = c(ORCID = "0000-0002-0837-8281")),
+	person(given = "Frederic", family= "Bertrand", role = c("cre", "aut"), email = "frederic.bertrand@utt.fr", comment = c(ORCID = "0000-0002-0837-8281")),
 	person(given = "Emmanuelle", family= "Claeys", role = c("aut"), email = "emmanuelle.claeys@unistra.fr"),
-	person(given = "Myriam", family= "Maumy-Bertrand", role = c("aut"), email = "myriam.maumy-bertrand@math.unistra.fr", comment = c(ORCID = "0000-0002-4615-1512")))
+	person(given = "Myriam", family= "Maumy-Bertrand", role = c("aut"), email = "myriam.maumy@utt.fr", comment = c(ORCID = "0000-0002-4615-1512")))
 Author: Frederic Bertrand [cre, aut] (<https://orcid.org/0000-0002-0837-8281>), Emmanuelle Claeys [aut], Myriam Maumy-Bertrand [aut] (<https://orcid.org/0000-0002-4615-1512>)
-Maintainer: Frederic Bertrand <frederic.bertrand@math.unistra.fr>
+Maintainer: Frederic Bertrand <frederic.bertrand@utt.fr>
 Description: Datasets and functions for the book "Modélisation statistique par la pratique avec R", F. Bertrand, E. Claeys and M. Maumy-Bertrand (2019, ISBN:9782100793525, Dunod, Paris). The first chapter of the book is dedicated to an introduction to the R statistical software. The second chapter deals with correlation analysis: Pearson, Spearman and Kendall simple, multiple and partial correlation coefficients. New wrapper functions for permutation tests or bootstrap of matrices of correlation are provided with the package. The third chapter is dedicated to data exploration with factorial analyses (PCA, CA, MCA, MDA) and clustering. The fourth chapter is dedicated to regression analysis: fitting and model diagnostics are detailed. The exercises focus on covariance analysis, logistic regression, Poisson regression, two-way analysis of variance for fixed or random factors. Various example datasets are shipped with the package: for instance on pokemon, world of warcraft, house tasks or food nutrition analyses.
 LazyLoad: yes
 LazyData: yes
@@ -20,4 +20,4 @@ Encoding: UTF-8
 Classification/MSC:
 URL: https://fbertran.github.io/homepage/, https://github.com/fbertran/ModStatR/
 BugReports: https://github.com/fbertran/ModStatR/issues/
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.1
