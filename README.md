@@ -52,9 +52,9 @@ Les sorties et le code de chaque chapitre sont également accessibles à l'aide 
 ## Solutions des exercices
 
 * [Code et résultats du chapitre *1*](https://fbertran.github.io/ModStatR/articles/SolChapitre1.html)
-* [Code et résultats du chapitre *2*](https://fbertran.github.io/ModStatR/articles/SolChapitre1.html)
-* [Code et résultats du chapitre *3*](https://fbertran.github.io/ModStatR/articles/SolChapitre1.html)
-* [Code et résultats du chapitre *4*](https://fbertran.github.io/ModStatR/articles/SolChapitre1.html)
+* [Code et résultats du chapitre *2*](https://fbertran.github.io/ModStatR/articles/SolChapitre2.html)
+* [Code et résultats du chapitre *3*](https://fbertran.github.io/ModStatR/articles/SolChapitre3.html)
+* [Code et résultats du chapitre *4*](https://fbertran.github.io/ModStatR/articles/SolChapitre4.html)
 
 Les solutions des exercices de chaque chapitre sont également accessibles à l'aide de l'onglet "Solutions des exercices".
 

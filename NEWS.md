@@ -1,5 +1,6 @@
 # ModStatR 1.3.2
 
+* Slight code improvement in examples
 * Maintainer address update
 
 # ModStatR 1.3.1

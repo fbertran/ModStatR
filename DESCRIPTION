@@ -2,7 +2,7 @@ Package: ModStatR
 Type: Package
 Title: Statistical Modelling in Action with R
 Version: 1.3.2
-Date: 2022-11-28
+Date: 2023-06-30
 Depends: R (>= 3.5.0)
 Imports: stats, boot, jmuOutlier, ellipse, hypergeo, gsl
 Suggests: BioStatR, ggplot2

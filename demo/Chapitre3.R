@@ -565,7 +565,7 @@ g2 <- s.arrow(res.nsc.d_TM$li, add = TRUE, plab.cex = 0.75)
 
 #Analyse des correspondances multiples
 #page 191
-poke<-read.csv("https://tinyurl.com/y4y6a86m",na.strings= c("","NA"))
+poke<-read.csv("https://tinyurl.com/y4y6a86m", na.strings= c("","NA"), stringsAsFactors = TRUE)
 poke<-as.data.frame(poke)
 poke$Generation<-as.factor(poke$Generation)
 summary(poke)
@@ -578,7 +578,7 @@ res.acm.poke<-dudi.acm(poke.x,scannf=FALSE)
 min(nrow(poke.x) - 1, nlevels(poke$Type.1) + nlevels(
   poke$Generation) + nlevels(poke$Legendary) - ncol(poke.x))
 
-fviz_screeplot(res.acm.poke)
+factoextra::fviz_screeplot(res.acm.poke)
 
 get_eig(res.acm.poke)
 
@@ -649,7 +649,8 @@ library(ggdendro)
 ggdendrogram(cah.ward, rotate = FALSE, size = 2)
 
 #page 205
-library(JLutils)
+library(devtools)
+if(!require(JLutils)){install_github("larmarange/JLutils")}
 best.cutree(cah.ward, min = 3, graph = TRUE, xlab = 
               "Nombre de classes", ylab = "Inertie relative")
 

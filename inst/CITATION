@@ -6,11 +6,12 @@ vers <- paste("R package version", meta$Version)
 publishe <- "Dunod, Paris"
 edition <- "1ère édition"
 
-citEntry(entry="Manual",
+
+bibentry(bibtype="Manual",
          title = titl,
-         author = personList(as.person("F. Bertrand"),
-                             as.person("E. Claeys"),
-                             as.person("M. Maumy-Bertrand")),
+         author = c(person(given = "Frederic", family= "Bertrand"),
+	                  person(given = "Emmanuelle", family= "Claeys"),
+                  	person(given = "Myriam", family= "Maumy-Bertrand")),
          year         = year,
          note         = vers,
          url          = "https://github.com/fbertran/ModStatR",
@@ -21,11 +22,11 @@ citEntry(entry="Manual",
 )
 
 
-citEntry(entry="Book",
+bibentry(bibtype="Book",
          title = "Modélisation statistique par la pratique avec R",
-         author = personList(as.person("F. Bertrand"),
-                             as.person("E. Claeys"), 
-                             as.person("M. Maumy-Bertrand")),
+         author = c(person(given = "Frederic", family= "Bertrand"),
+                	person(given = "Emmanuelle", family= "Claeys"),
+                	person(given = "Myriam", family= "Maumy-Bertrand")),
 	 publisher = "Dunod, Paris",
          year         = 2019,
          url          = "https://github.com/fbertran/ModStatR",
