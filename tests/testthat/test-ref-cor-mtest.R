@@ -1,0 +1,15 @@
+test_that("shapes and bounds are correct", {
+  set.seed(321)
+  mat <- matrix(rnorm(4*60), ncol=4)
+  res <- ModStatR::ref.cor.mtest(mat, matrho_0 = 0)
+  expect_true(all(dim(res$p) == c(4,4)))
+  expect_true(all(dim(res$cor) == c(4,4)))
+  expect_true(all(dim(res$n) == c(4,4)))
+  expect_equal(diag(res$p), rep(0, 4))
+  expect_equal(diag(res$cor), rep(1, 4))
+  expect_true(all(res$p >= 0 & res$p <= 1, na.rm=TRUE))
+  # Correlation matrix should match stats::cor with pairwise complete obs on the upper triangle
+  cor_ref <- cor(mat, use="pairwise.complete.obs")
+  iu <- upper.tri(cor_ref)
+  expect_equal(res$cor[iu], cor_ref[iu], tolerance=1e-12)
+})

@@ -31,3 +31,5 @@ genlogo.R
 ^vignettes/.*_cache$
 ^vignettes/.*_files$
 ^\.github$
+^tools/coverage.R
+^coverage.html

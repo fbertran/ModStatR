@@ -1,0 +1,2476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<style>body{background-color:white;}</style>
+<link href="lib/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="lib/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="lib/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="lib/datatables-binding-0.33/datatables.js"></script>
+<script src="lib/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="lib/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="lib/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="lib/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+<link href="lib/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
+<script src="lib/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+<link href="lib/highlight.js-6.2/rstudio.css" rel="stylesheet" />
+<script src="lib/highlight.js-6.2/highlight.pack.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="lib/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<link href="lib/bootstrap-3.3.5/css/bootstrap-theme.min.css" rel="stylesheet" />
+<script src="lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="lib/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="lib/bootstrap-3.3.5/shim/respond.min.js"></script>
+
+</head>
+<body>
+<div class="container-fluid">
+  <style type="text/css">table tr:hover td {
+  font-weight:bold;text-decoration:none
+}
+table tr.covered td{
+  background-color:rgba(95,151,68,0.3)
+}
+
+table tr:hover.covered .num{
+  background-color:rgba(95,151,68,0.7)
+}
+table tr.missed td{
+  background-color:rgba(185,73,71,0.3)
+}
+table tr:hover.missed .num{
+  background-color:rgba(185,73,71,0.7)
+}
+
+table tr.missed:hover td{
+  -webkit-box-shadow:0 -2px 0 0 #b94947 inset;
+  -moz-box-shadow:0 -2px 0 0 #b94947 inset;
+  box-shadow:0 -2px 0 0 #b94947 inset
+}
+table tr.covered:hover td{
+  -webkit-box-shadow:0 -2px 0 0 #5f9744 inset;
+  -moz-box-shadow:0 -2px 0 0 #5f9744 inset;
+  box-shadow:0 -2px 0 0 #5f9744 inset
+}
+
+table tr.never td{
+  background-color:transparent
+}
+
+table tbody {
+  border-style: solid;
+  border: 1px solid rgba(0,0,0,0.1)
+}
+
+table .num {
+  border-right: 1px solid rgba(0,0,0,0.1)
+}
+
+td.coverage em {
+  opacity: 0.5;
+}
+
+table td.coverage {
+  border-right: 1px solid rgba(0,0,0,0.1);
+  font-weight: bold;
+  text-align: center;
+}
+table.table-condensed pre {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 11px;
+}
+div#files td {
+  padding: 0;
+  padding-left: 5px;
+}
+
+div#files td.num {
+  padding-right: 5px;
+}
+
+table.table-condensed {
+  font-size: 11px;
+}</style>
+  <div class="col-md-8 col-md-offset-2">
+    <h2>ModStatR coverage - 84.21%</h2>
+    <div class="tabbable">
+      <ul class="nav nav-tabs" data-tabsetid="covr">
+        <li class="active">
+          <a href="#tab-covr-1" data-toggle="tab" data-value="Files">Files</a>
+        </li>
+        <li>
+          <a href="#tab-covr-2" data-toggle="tab" data-value="Source">Source</a>
+        </li>
+      </ul>
+      <div class="tab-content" data-tabsetid="covr">
+        <div class="tab-pane active" title="Files" data-value="Files" id="tab-covr-1">
+          <div class="datatables html-widget html-fill-item" id="htmlwidget-36d8542c91a99e85c6bc" style="width:100%;height:500px;"></div>
+          <script type="application/json" data-for="htmlwidget-36d8542c91a99e85c6bc">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["<a href=\"#\">R/functions.R<\/a>"],[335],[112],[94],[18],["20"],["83.93%"]],"container":"<table class=\"row-border\">\n  <thead>\n    <tr>\n      <th>File<\/th>\n      <th>Lines<\/th>\n      <th>Relevant<\/th>\n      <th>Covered<\/th>\n      <th>Missed<\/th>\n      <th>Hits / Line<\/th>\n      <th>Coverage<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"searching":false,"dom":"t","paging":false,"columnDefs":[{"targets":6,"createdCell":"function(td, cellData, rowData, row, col) {\n  var percent = cellData.replace(\"%\", \"\");\n  if (percent > 90) {\n    var grad = \"linear-gradient(90deg, #edfde7 \" + cellData + \", white \" + cellData + \")\";\n  } else if (percent > 75) {\n    var grad = \"linear-gradient(90deg, #f9ffe5 \" + cellData + \", white \" + cellData + \")\";\n  } else {\n    var grad = \"linear-gradient(90deg, #fcece9 \" + cellData + \", white \" + cellData + \")\";\n  }\n  $(td).css(\"background\", grad);\n}\n"},{"className":"dt-right","targets":[1,2,3,4]},{"name":"File","targets":0},{"name":"Lines","targets":1},{"name":"Relevant","targets":2},{"name":"Covered","targets":3},{"name":"Missed","targets":4},{"name":"Hits / Line","targets":5},{"name":"Coverage","targets":6}],"order":[],"autoWidth":false,"orderClasses":false},"callback":"function(table) {\ntable.on('click.dt', 'a', function() {\n  files = $('div#files div');\n  files.not('div.hidden').addClass('hidden');\n  id = $(this).text();\n  files.filter('div[id=\\'' + id + '\\']').removeClass('hidden');\n  $('ul.nav a[data-value=Source]').text(id).tab('show');\n});\n}","selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.columnDefs.0.createdCell","callback"],"jsHooks":[]}</script>
+        </div>
+        <div class="tab-pane" title="Source" data-value="Source" id="tab-covr-2">
+          <div id="files">
+            <div id="R/functions.R" class="hidden">
+              <table class="table-condensed">
+                <tbody>
+                  <tr class="never">
+                    <td class="num">1</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @title Fonction hypergéométrique de Gauss (hypergeo)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">2</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">3</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param a Paramètre pour Gauss2F1</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">4</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param b Paramètre pour Gauss2F1</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">5</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param c Paramètre pour Gauss2F1</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">6</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param x Argument principal, nombre réel ou complexe</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">7</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">8</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @return Valeur numérique, l'évaluation de la fonction hypergéométrique de Gauss pour les paramètres \code{a}, \code{b}, \code{c} et \code{x}</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">9</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @export</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">10</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">11</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @examples</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">12</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' Gauss2F1(1/2,1/2,(40-2)/2,1-.75^2)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">13</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' </pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">14</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">Gauss2F1 &lt;- function(a,b,c,x){</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">15</td>
+                    <td class="coverage">723<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  if(x&gt;=0 &amp; x&lt;1){</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">16</td>
+                    <td class="coverage">723<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  Re(hypergeo::hypergeo(a,b,c,x))</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">17</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  }else{</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">18</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      Re(hypergeo::hypergeo(c-a,b,c,1-1/(1-x))/(1-x)^b)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">19</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  }</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">20</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">}</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">21</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">Gauss2F1&lt;-Vectorize(Gauss2F1, vectorize.args = "x")</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">22</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">23</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @title Fonction hypergéométrique de Gauss (gsl)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">24</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">25</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param a Paramètre pour Gauss2F1</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">26</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param b Paramètre pour Gauss2F1</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">27</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param c Paramètre pour Gauss2F1</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">28</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param x Argument principal, nombre réel ou complexe</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">29</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">30</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @return Valeur numérique, l'évaluation de la fonction hypergéométrique de Gauss pour les paramètres \code{a}, \code{b}, \code{c} et \code{x}</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">31</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @export</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">32</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">33</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @examples</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">34</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' Gauss2F1gsl(1/2,1/2,(40-2)/2,1-.75^2)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">35</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' </pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">36</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">Gauss2F1gsl &lt;- function(a,b,c,x){</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">37</td>
+                    <td class="coverage">3<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  if(x&gt;=0 &amp; x&lt;1){</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">38</td>
+                    <td class="coverage">3<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    gsl::hyperg_2F1(a,b,c,x)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">39</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  }else{</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">40</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    gsl::hyperg_2F1(c-a,b,c,1-1/(1-x))/(1-x)^b</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">41</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  }</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">42</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  }</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">43</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">Gauss2F1gsl&lt;-Vectorize(Gauss2F1gsl, vectorize.args = "x")</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">44</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">45</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @title Corrélation de Bravais-Pearson pour bootstrap ou permutation</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">46</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">47</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param x un vecteur numérique</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">48</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param y un vecteur numérique</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">49</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param indices un vecteur d'indices de même longueur que x et y</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">50</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">51</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @return Valeur numérique, le coefficient de corrélation de Bravais-Pearson calculé pour la permutation des vecteurs \code{x} et \code{y} spécifiée par le vecteur \code{indices}</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">52</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @export</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">53</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">54</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @examples</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">55</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' set.seed(1133)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">56</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' rho(rnorm(30),rnorm(30),sample(30))</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">57</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' </pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">58</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">rho &lt;- function(x, y, indices){</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">59</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  restest &lt;- cor.test(x[indices], y[indices],</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">60</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">                      method = c("pearson"))</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">61</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  return(restest$estimate)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">62</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">}</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">63</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">64</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @title Densité de rho chapeau, estimateur du coefficient de corrélation de Bravais-Pearson</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">65</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">66</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param rho Valeur en laquelle la densité est évaluée</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">67</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param rho_0 Valeur de référence pour le coefficient de corrélation de Bravais-Pearson</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">68</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param n Effectif de l'échantillon</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">69</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">70</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @return Valeur numérique, densité au point \code{rho} de l'estimateur, construit à partir d'un échantillon de taille \code{n}, du coefficient de corrélation de Bravais-Pearson, de valeur théorique égale à \code{rho0}, sous hypothèse de normalité multivariée</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">71</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @export</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">72</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">73</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @examples</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">74</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' corrdist(.7,.8,30)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">75</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' </pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">76</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">corrdist &lt;- function (rho, rho_0, n) {</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">77</td>
+                    <td class="coverage">59<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  y = (n-2)*gamma(n-1)*(1-rho_0^2)^((n-1)/2)*(1-rho^2)^((n-4)/2)</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">78</td>
+                    <td class="coverage">59<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  y = y/(sqrt(2*pi)*gamma(n-1/2)*(1-rho_0*rho)^(n-3/2))</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">79</td>
+                    <td class="coverage">59<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  y = y*Gauss2F1(1/2,1/2,(2*n-1)/2,(rho_0*rho+1)/2)</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">80</td>
+                    <td class="coverage">59<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  return(y)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">81</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">}</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">82</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">83</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @title Approximation de la densité de rho chapeau, estimateur du coefficient de corrélation de Bravais-Pearson</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">84</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">85</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param rho Valeur en laquelle la densité est évaluée</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">86</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param rho_0 Valeur de référence pour le coefficient de corrélation de Bravais-Pearson</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">87</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param n Effectif de l'échantillon</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">88</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">89</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @return Valeur numérique, approximation de la densité au point \code{rho} de l'estimateur, construit à partir d'un échantillon de taille \code{n}, du coefficient de corrélation de Bravais-Pearson, de valeur théorique égale à \code{rho0}, sous hypothèse de normalité multivariée</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">90</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @export</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">91</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">92</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @examples</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">93</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' corrdistapprox(.7,.8,30)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">94</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' </pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">95</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">corrdistapprox &lt;- function (rho, rho_0, n) {</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">96</td>
+                    <td class="coverage">26<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  y = (n-2)*gamma(n-1)*(1-rho_0^2)^((n-1)/2)*(1-rho^2)^((n-4)/2)</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">97</td>
+                    <td class="coverage">26<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  y = y/(sqrt(2*pi)*gamma(n-1/2)*(1-rho_0*rho)^(n-3/2))</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">98</td>
+                    <td class="coverage">26<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  y = y*(1+1/4*(rho_0*rho+1)/(2*n-1)+9/32*(rho_0*rho+1)^2/</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">99</td>
+                    <td class="coverage">26<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">           (2*n-1)/(2*n+1))</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">100</td>
+                    <td class="coverage">26<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  return(y)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">101</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">}</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">102</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">103</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @title Meilleure approximation de la densité de rho chapeau, estimateur du coefficient de corrélation de Bravais-Pearson</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">104</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">105</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param rho Valeur en laquelle la densité est évaluée</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">106</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param rho_0 Valeur de référence pour le coefficient de corrélation de Bravais-Pearson</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">107</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param n Effectif de l'échantillon</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">108</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">109</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @return Valeur numérique, approximation de la densité au point \code{rho} de l'estimateur, construit à partir d'un échantillon de taille \code{n}, du coefficient de corrélation de Bravais-Pearson, de valeur théorique égale à \code{rho0}, sous hypothèse de normalité multivariée</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">110</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @export</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">111</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">112</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @examples</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">113</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' corrdistapprox2(.7,.8,30)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">114</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' </pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">115</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">corrdistapprox2 &lt;- function (rho, rho_0, n) {</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">116</td>
+                    <td class="coverage">26<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  y = (n-2)*gamma(n-1)*(1-rho_0^2)^((n-1)/2)*(1-rho^2)^((n-4)/2)</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">117</td>
+                    <td class="coverage">26<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  y = y/(sqrt(2*pi)*gamma(n-1/2)*(1-rho_0*rho)^(n-3/2))</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">118</td>
+                    <td class="coverage">26<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  y = y*(</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">119</td>
+                    <td class="coverage">26<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    1+1/4*(rho_0*rho+1)/(2*n-1)+ </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">120</td>
+                    <td class="coverage">26<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    9/32*(rho_0*rho+1)^2/(2*n+1)/(2*n-1)+ </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">121</td>
+                    <td class="coverage">26<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    75/128*(rho_0*rho+1)^3/((2*n+3)*(4*n^2-1))+ </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">122</td>
+                    <td class="coverage">26<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    3675/2048*(rho_0*rho+1)^4/((2*n+3)*(2*n+5)*(4*n^2-1))+ </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">123</td>
+                    <td class="coverage">26<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    59535/8192*(rho_0*rho+1)^5/((2*n+3)*(2*n+5)*(2*n + 7)*(4*n^2-1))</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">124</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  )</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">125</td>
+                    <td class="coverage">26<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  return(y)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">126</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">}</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">127</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">128</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @title Test exact du coefficient de corrélation de Bravais-Pearson avec une référence non nécessairement nulle</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">129</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' </pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">130</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param corobs Valeur observée du coefficient de corrélation de Bravais-Pearson</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">131</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param rho_0 Valeur de référence pour le coefficient de corrélation de Bravais-Pearson</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">132</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param n Effectif de l'échantillon</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">133</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">134</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @return Valeur numérique, p$valeur calculée de manière exacte du test avec la référence \code{rho0} du coefficient de corrélation de Bravais-Pearson sous hypothèse de normalité multivariée</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">135</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @export</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">136</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">137</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @examples</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">138</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' ref.cor.test(corobs=.7,rho_0=.8,n=30)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">139</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' </pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">140</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">ref.cor.test &lt;- function(corobs, rho_0, n){</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">141</td>
+                    <td class="coverage">11<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  if(corobs&lt;rho_0){</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">142</td>
+                    <td class="coverage">2<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    return(2*integrate(corrdist, lower=-1, upper=corobs, </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">143</td>
+                    <td class="coverage">2<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">                       rho_0=rho_0, n=n)$value)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">144</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  }</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">145</td>
+                    <td class="coverage">9<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  if(corobs&gt;rho_0){</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">146</td>
+                    <td class="coverage">6<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    return(2*integrate(corrdist, lower=corobs, upper=1,</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">147</td>
+                    <td class="coverage">6<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">                       rho_0=rho_0, n=n)$value)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">148</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  }</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">149</td>
+                    <td class="coverage">3<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  if(corobs==rho_0){</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">150</td>
+                    <td class="coverage">3<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    return(1)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">151</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  }</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">152</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">}</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">153</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">154</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">155</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @title Test exact matriciel du corrélation de Bravais-Pearson avec une référence non nécessairement nulle</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">156</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' </pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">157</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param mat Matrice des données</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">158</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param matrho_0 Matrice des valeurs de référence pour chacun des coefficients de corrélation de Bravais-Pearson</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">159</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">160</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @return Liste comportant trois matrices : la matrice des p-valeurs, la matrice des coefficients de corrélations observés et la matrice des effectifs ayant servis au calcul de ces coefficients de corrélation</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">161</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @export</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">162</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">163</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @examples</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">164</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' data(Mesures5,package="BioStatR")</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">165</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' Mes5_red_lr = subset(Mesures5[,-5],subset=Mesures5$espece=="laurier rose")</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">166</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' ref.cor.mtest(Mes5_red_lr[,c("masse","taille","masse_sec")],0.7)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">167</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' </pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">168</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">ref.cor.mtest = function (mat, matrho_0) </pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">169</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">{ </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">170</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  mat &lt;- as.matrix(mat)</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">171</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  n &lt;- ncol(mat)</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">172</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  if(is.vector(matrho_0) &amp; length(matrho_0)==1){matrho_0= </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">173</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    matrix(matrho_0,nrow=n,ncol=n)} </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">174</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  p.mat &lt;- cor.mat &lt;- nval.mat &lt;- matrix(NA, n, n) </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">175</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  diag(p.mat) &lt;- 0 </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">176</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  diag(cor.mat) &lt;- 1 </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">177</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  diag(nval.mat) &lt;- colSums(!is.na(mat)) </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">178</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  for (i in 1:(n-1)) { </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">179</td>
+                    <td class="coverage">3<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    for (j in (i+1):n) { </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">180</td>
+                    <td class="coverage">6<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      cor.mat[i,j] &lt;- cor.mat[j,i] &lt;- cor(x = mat[,i], </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">181</td>
+                    <td class="coverage">6<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">                                          y = mat[,j],method="pearson",use="pairwise.complete.obs") </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">182</td>
+                    <td class="coverage">6<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      nval.mat[i,j]&lt;- nval.mat[j,i]&lt;- nrow(na.omit(mat[,c(i,j)])) </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">183</td>
+                    <td class="coverage">6<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      p.mat[i,j]&lt;- p.mat[j,i]&lt;- ref.cor.test(corobs=cor.mat[i,j], </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">184</td>
+                    <td class="coverage">6<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">                                             rho_0=matrho_0[i,j], n=nval.mat[i,j])</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">185</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    }</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">186</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  }</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">187</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  list(p = p.mat, cor = cor.mat, n=nval.mat)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">188</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">}</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">189</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">190</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @title Test par permutation d'une matrice de corrélations de Bravais-Pearson</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">191</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">192</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param mat Matrice des données</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">193</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param alternative Type d'hypothèses bilatéral, unilatéral inférieur ou supérieur</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">194</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param method Méthode de calcul de corrélation Pearson ou Spearman</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">195</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param num.sim Nombre de simulations</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">196</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param ... Paramètre suplémentaires transmis à la fonction cor</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">197</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">198</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @return Liste de deux éléments : matrice p.mat (matrice des p-valeurs des tests) et matrice cor.mat (matrice des valeurs observées des coefficients de corrélation de Bravais-Pearson)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">199</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @export</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">200</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">201</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @examples</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">202</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' data(Mesures5,package="BioStatR")</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">203</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' Mes5_red_gv = subset(Mesures5[,-5],subset=Mesures5$espece=="glycine violette")</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">204</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' perm.cor.mtest(Mes5_red_gv,num.sim=100)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">205</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' </pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">206</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">perm.cor.mtest = function(mat, alternative= "two.sided", </pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">207</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">                          method= "pearson", num.sim= 20000, ...) </pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">208</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  {</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">209</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  mat &lt;- as.matrix(mat)</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">210</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  n &lt;- ncol(mat)</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">211</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  p.mat &lt;- cor.mat &lt;- matrix(NA, n, n)</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">212</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  diag(p.mat) &lt;- 0</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">213</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  diag(cor.mat) &lt;- 1</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">214</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  for (i in 1:(n-1)) {</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">215</td>
+                    <td class="coverage">4<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    for (j in (i + 1):n) {</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">216</td>
+                    <td class="coverage">10<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      tmp &lt;- jmuOutlier::perm.cor.test(x = mat[, i], y = mat[, j], </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">217</td>
+                    <td class="coverage">10<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">                           alternative=alternative, method=method, </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">218</td>
+                    <td class="coverage">10<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">                           num.sim=num.sim)</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">219</td>
+                    <td class="coverage">10<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      p.mat[i, j] &lt;- p.mat[j, i] &lt;- tmp$p.value</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">220</td>
+                    <td class="coverage">10<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      cor.mat[i, j] &lt;- cor.mat[j, i] &lt;- cor(x = mat[, i],</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">221</td>
+                    <td class="coverage">10<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">                                            y = mat[, j], method=method, ...)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">222</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    }</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">223</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  }</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">224</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  list(p = p.mat, cor = cor.mat)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">225</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">}</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">226</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">227</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @title Matrice de corrélation de Bravais-Pearson, bootstrap ou permutation</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">228</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">229</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param mat Matrice des données</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">230</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param indices Vecteur d'indices dont la longueur est égale au nombre de lignes de la matrice</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">231</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">232</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @return Matrice des corrélations de Bravais-Pearson des données permutées</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">233</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @export</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">234</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">235</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @examples</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">236</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' data(Mesures5,package="BioStatR")</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">237</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' Mes5_red_gv = subset(Mesures5[,-5],subset=Mesures5$espece=="glycine violette")</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">238</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' set.seed(1133)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">239</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' rho.mult(Mes5_red_gv[,c("masse","taille","masse_sec")],sample(nrow(Mes5_red_gv)))</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">240</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' </pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">241</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">rho.mult &lt;- function(mat, indices){</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">242</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  tempcor &lt;- as.vector(cor(x = mat[indices, ], method="pearson", </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">243</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">                           use="pairwise.complete.obs"))[outer(1:ncol(mat),1:ncol(mat),"&gt;")]</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">244</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  return(tempcor)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">245</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">}</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">246</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">247</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @title Intervalles de confiance bootstrap pour une matrice de corrélation de Bravais-Pearson</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">248</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">249</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param mat Matrice des données</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">250</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param boot.mcor.res Résultat du bootstrap de la matrice de corrélation de Bravais-Pearson</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">251</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param conflevel Niveau de confiance pour les intervalles</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">252</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">253</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @return Liste de quatre éléments : matrice des limites inférieures des intervalles de confiance bootstrap percentile, matrice des limites supérieures des intervalles de confiance bootstrap percentile, matrice des limites inférieures des intervalles de confiance bootstrap BCa, matrice des limites supérieures des intervalles de confiance bootstrap BCa</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">254</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @export</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">255</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">256</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @examples</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">257</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' data(Mesures5,package="BioStatR")</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">258</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' Mes5_red_lr = subset(Mesures5[,-5],subset=Mesures5$espece=="laurier rose")</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">259</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' library(boot)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">260</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' boot.mcor &lt;- boot(Mes5_red_lr[,c("masse","taille","masse_sec")], rho.mult, R=1000)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">261</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' boot.mcor</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">262</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' boot.mcor.ic.res &lt;- boot.mcor.ic(Mes5_red_lr[,c("masse", "taille","masse_sec")],boot.mcor)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">263</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' boot.mcor.ic.res</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">264</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' </pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">265</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">boot.mcor.ic &lt;- function(mat, boot.mcor.res, conflevel = 0.95){</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">266</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  indboot.ci=function(i,type, conf = 0.95){</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">267</td>
+                    <td class="coverage">12<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    if(type=="perc") </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">268</td>
+                    <td class="coverage">6<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      return(boot.ci(boot.mcor.res,index=i,type=type,conf=conf)$perc)</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">269</td>
+                    <td class="coverage">6<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    if(type=="bca")</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">270</td>
+                    <td class="coverage">6<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      return(boot.ci(boot.mcor.res,index=i,type=type,conf=conf)$bca)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">271</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  }</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">272</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  bootperc &lt;- matrix(unlist(lapply(1:length(boot.mcor.res$t0),indboot.ci,type= </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">273</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">                                     "perc",conf=conflevel)),ncol=5,byrow=TRUE) </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">274</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  bootabc &lt;- matrix(unlist(lapply(1:length(boot.mcor.res$t0),indboot.ci,type= </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">275</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">                                    "bca",conf=conflevel)),ncol=5,byrow=TRUE) </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">276</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  cor.ic.percentile.low=matrix(NA,ncol(mat),ncol(mat)) </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">277</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  diag(cor.ic.percentile.low) &lt;- 1 </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">278</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  cor.ic.percentile.low[outer(1:ncol(mat),1:ncol(mat),"&gt;")]&lt;-bootperc[,4] </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">279</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  cor.ic.percentile.low[outer(1:ncol(mat),1:ncol(mat),"&lt;")]&lt;-bootperc[,4] </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">280</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  cor.ic.percentile.up=matrix(NA,ncol(mat),ncol(mat)) </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">281</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  diag(cor.ic.percentile.up) &lt;- 1 </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">282</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  cor.ic.percentile.up[outer(1:ncol(mat),1:ncol(mat),"&gt;")]&lt;-bootperc[,5] </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">283</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  cor.ic.percentile.up[outer(1:ncol(mat),1:ncol(mat),"&lt;")]&lt;-bootperc[,5] </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">284</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  cor.ic.BCa.low=matrix(NA,ncol(mat),ncol(mat)) </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">285</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  diag(cor.ic.BCa.low) &lt;- 1 </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">286</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  cor.ic.BCa.low[outer(1:ncol(mat),1:ncol(mat),"&gt;")]&lt;-bootabc[,4] </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">287</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  cor.ic.BCa.low[outer(1:ncol(mat),1:ncol(mat),"&lt;")]&lt;-bootabc[,4] </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">288</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  cor.ic.BCa.up=matrix(NA,ncol(mat),ncol(mat)) </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">289</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  diag(cor.ic.BCa.up) &lt;- 1 </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">290</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  cor.ic.BCa.up[outer(1:ncol(mat),1:ncol(mat),"&gt;")]&lt;- bootabc[,5] </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">291</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  cor.ic.BCa.up[outer(1:ncol(mat),1:ncol(mat),"&lt;")]&lt;-bootabc[,5] </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">292</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  return(list(cor.ic.percentile.low=cor.ic.percentile.low, </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">293</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">              cor.ic.percentile.up=cor.ic.percentile.up,cor.ic.BCa.low= </pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">294</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">                cor.ic.BCa.low,cor.ic.BCa.up=cor.ic.BCa.up)) </pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">295</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">}</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">296</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">297</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">298</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @title Ellipse ou intervalles de confiance pour une paire de paramètres d'un modèle linéaire</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">299</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">300</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param g Modele linéaire</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">301</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param a Premier paramètre de l'ellipse</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">302</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param b Second paramtère de l'ellipse</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">303</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param which Type de région de confiance : 1 (ellipse autour des deux paramètres), 2 (rectangle autour du premier paramètre, axe des x) et 3 (rectangle autour du second paramètre, axes des y)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">304</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param col Couleur de remplissage de la région de confiance</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">305</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">306</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @return NULL</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">307</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @export</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">308</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">309</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @examples</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">310</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' data(Mesures,package="BioStatR")</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">311</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' Mes.B = subset(Mesures,Mesures$espece=="bignone")</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">312</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' model2&lt;-lm(masse~taille+I(taille^2),data=Mes.B)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">313</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' my.confidence.region(model2, which=1)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">314</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' my.confidence.region(model2, which=2)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">315</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' my.confidence.region(model2, which=3)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">316</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' </pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">317</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">my.confidence.region &lt;- function(g,a=2,b=3,which=0,col="pink"){ </pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">318</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  e &lt;- ellipse::ellipse(g,c(a,b)) </pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">319</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  x &lt;- g$coef[a]; y &lt;- g$coef[b] </pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">320</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  cf &lt;- summary(g)$coefficients </pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">321</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  ia &lt;- cf[a,2]*stats::qt(.975,g$df.residual) </pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">322</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  ib &lt;- cf[b,2]*stats::qt(.975,g$df.residual) </pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">323</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  xmin &lt;- min(e[,1]); xmax &lt;- max(e[,1])</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">324</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  ymin &lt;- min(e[,2]); ymax &lt;- max(e[,2]) </pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">325</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  graphics::plot(e, type="l", xlim=c(xmin,xmax), ylim=c(ymin,ymax)) </pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">326</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  if(which==1){graphics::polygon(e,col=col) } </pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">327</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  else if(which==2){graphics::rect(x-ia,par("usr")[3],x+ia,par("usr")[4], </pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">328</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">                          col=col,border=col)} </pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">329</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  else if(which==3){graphics::rect(par("usr")[1],y-ib,par("usr")[2],y+ib, </pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">330</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">                          col=col,border=col)} </pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">331</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  lines(e); points(x,y,pch=18) </pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">332</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  graphics::abline(v=c(x+ia,x-ia),lty=2); graphics::abline(h=c(y+ib,y-ib),lty=2) </pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">333</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  graphics::points(0,0); graphics::abline(v=0,lty="F848"); graphics::abline(h=0,lty="F848") </pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">334</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">}</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">335</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <script>$('div#files pre').each(function(i, block) {
+    hljs.highlightBlock(block);
+});</script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

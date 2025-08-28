@@ -269,9 +269,9 @@ boot.mcor.ic <- function(mat, boot.mcor.res, conflevel = 0.95){
     if(type=="bca")
       return(boot.ci(boot.mcor.res,index=i,type=type,conf=conf)$bca)
   }
-  bootperc <- matrix(unlist(lapply(1:ncol(mat),indboot.ci,type= 
+  bootperc <- matrix(unlist(lapply(1:length(boot.mcor.res$t0),indboot.ci,type= 
                                      "perc",conf=conflevel)),ncol=5,byrow=TRUE) 
-  bootabc <- matrix(unlist(lapply(1:ncol(mat),indboot.ci,type= 
+  bootabc <- matrix(unlist(lapply(1:length(boot.mcor.res$t0),indboot.ci,type= 
                                     "bca",conf=conflevel)),ncol=5,byrow=TRUE) 
   cor.ic.percentile.low=matrix(NA,ncol(mat),ncol(mat)) 
   diag(cor.ic.percentile.low) <- 1 

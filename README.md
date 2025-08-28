@@ -29,14 +29,14 @@ Ce site et les exemples qui y sont reproduits ont été créés par F. Bertrand 
 Vous pouvez installer la dernière version du package ModStatR depuis le [CRAN](https://CRAN.R-project.org) with:
 
 
-```r
+``` r
 install.packages("ModStatR")
 ```
 
 Vous pouvez installer la dernière version du package ModStatR depuis le [github](https://github.com) with:
 
 
-```r
+``` r
 devtools::install_github("fbertran/ModStatR")
 ```
 

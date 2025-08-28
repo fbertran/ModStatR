@@ -1,138 +1,48 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>/404.html</loc>
-  </url>
-  <url>
-    <loc>/articles/Chapitre1.html</loc>
-  </url>
-  <url>
-    <loc>/articles/Chapitre2.html</loc>
-  </url>
-  <url>
-    <loc>/articles/Chapitre3.html</loc>
-  </url>
-  <url>
-    <loc>/articles/Chapitre4.html</loc>
-  </url>
-  <url>
-    <loc>/articles/SolChapitre1.html</loc>
-  </url>
-  <url>
-    <loc>/articles/SolChapitre2.html</loc>
-  </url>
-  <url>
-    <loc>/articles/SolChapitre3.html</loc>
-  </url>
-  <url>
-    <loc>/articles/SolChapitre4.html</loc>
-  </url>
-  <url>
-    <loc>/authors.html</loc>
-  </url>
-  <url>
-    <loc>/index.html</loc>
-  </url>
-  <url>
-    <loc>/news/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/CancerSein.html</loc>
-  </url>
-  <url>
-    <loc>/reference/Gauss2F1.html</loc>
-  </url>
-  <url>
-    <loc>/reference/Gauss2F1gsl.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ModStatR.html</loc>
-  </url>
-  <url>
-    <loc>/reference/SidaChat.html</loc>
-  </url>
-  <url>
-    <loc>/reference/boot.mcor.ic.html</loc>
-  </url>
-  <url>
-    <loc>/reference/chal.html</loc>
-  </url>
-  <url>
-    <loc>/reference/corrdist.html</loc>
-  </url>
-  <url>
-    <loc>/reference/corrdistapprox.html</loc>
-  </url>
-  <url>
-    <loc>/reference/corrdistapprox2.html</loc>
-  </url>
-  <url>
-    <loc>/reference/d_TM.html</loc>
-  </url>
-  <url>
-    <loc>/reference/d_hotels.html</loc>
-  </url>
-  <url>
-    <loc>/reference/d_hotels_n.html</loc>
-  </url>
-  <url>
-    <loc>/reference/d_macdo.html</loc>
-  </url>
-  <url>
-    <loc>/reference/d_pres2002.html</loc>
-  </url>
-  <url>
-    <loc>/reference/d_pres2007.html</loc>
-  </url>
-  <url>
-    <loc>/reference/d_vac.html</loc>
-  </url>
-  <url>
-    <loc>/reference/d_wow.html</loc>
-  </url>
-  <url>
-    <loc>/reference/data_event.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ecole2.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ecole3.html</loc>
-  </url>
-  <url>
-    <loc>/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/my.confidence.region.html</loc>
-  </url>
-  <url>
-    <loc>/reference/parasites.html</loc>
-  </url>
-  <url>
-    <loc>/reference/perm.cor.mtest.html</loc>
-  </url>
-  <url>
-    <loc>/reference/poke.html</loc>
-  </url>
-  <url>
-    <loc>/reference/polypes.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ref.cor.mtest.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ref.cor.test.html</loc>
-  </url>
-  <url>
-    <loc>/reference/resistance.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rho.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rho.mult.html</loc>
-  </url>
-  <url>
-    <loc>/reference/vitamines.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://fbertran.github.io/ModStatR/404.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/articles/Chapitre1.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/articles/Chapitre2.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/articles/Chapitre3.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/articles/Chapitre4.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/articles/SolChapitre1.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/articles/SolChapitre2.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/articles/SolChapitre3.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/articles/SolChapitre4.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/authors.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/index.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/news/index.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/CancerSein.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/Gauss2F1.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/Gauss2F1gsl.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/ModStatR-package.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/SidaChat.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/boot.mcor.ic.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/chal.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/corrdist.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/corrdistapprox.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/corrdistapprox2.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/d_TM.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/d_hotels.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/d_hotels_n.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/d_macdo.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/d_pres2002.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/d_pres2007.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/d_vac.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/d_wow.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/data_event.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/ecole2.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/ecole3.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/index.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/my.confidence.region.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/parasites.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/perm.cor.mtest.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/poke.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/polypes.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/ref.cor.mtest.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/ref.cor.test.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/resistance.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/rho.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/rho.mult.html</loc></url>
+<url><loc>https://fbertran.github.io/ModStatR/reference/vitamines.html</loc></url>
 </urlset>
+

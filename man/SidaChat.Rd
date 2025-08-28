@@ -5,7 +5,7 @@
 \alias{SidaChat}
 \title{Sida du chat}
 \format{
-Un objet \code{data.frame} avec 33 lignes et 3 variables :
+Un objet \code{data.frame} avec 32 lignes et 3 variables :
 \describe{
   \item{\code{Sexe}}{Factor w/ 2 levels, Sexe de l'animal}
   \item{\code{Jours}}{Integer vector, Nombre de jours après l'inoculation}

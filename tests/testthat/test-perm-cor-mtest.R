@@ -1,0 +1,11 @@
+test_that("structure and bounds with small simulation budget", {
+  skip_if_not_installed("jmuOutlier")
+  set.seed(202)
+  mat <- matrix(rnorm(5*40), ncol=5)
+  res <- ModStatR::perm.cor.mtest(mat, num.sim=199, method="pearson")
+  expect_true(all(dim(res$p) == c(5,5)))
+  expect_true(all(dim(res$cor) == c(5,5)))
+  expect_equal(diag(res$p), rep(0, 5))
+  expect_equal(diag(res$cor), rep(1, 5))
+  expect_true(all(res$p >= 0 & res$p <= 1, na.rm=TRUE))
+})
