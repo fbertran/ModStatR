@@ -1,3 +1,8 @@
+# ModStatR 1.4.1
+
+* Maintainer email update
+* Added package doi to citation and README.Rmd
+
 # ModStatR 1.4.0
 
 * Fixed package description

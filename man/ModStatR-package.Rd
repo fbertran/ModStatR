@@ -27,12 +27,12 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Frederic Bertrand \email{frederic.bertrand@utt.fr} (\href{https://orcid.org/0000-0002-0837-8281}{ORCID})
+\strong{Maintainer}: Frederic Bertrand \email{frederic.bertrand@lecnam.net} (\href{https://orcid.org/0000-0002-0837-8281}{ORCID})
 
 Authors:
 \itemize{
   \item Emmanuelle Claeys \email{emmanuelle.claeys@unistra.fr}
-  \item Myriam Maumy-Bertrand \email{myriam.maumy@utt.fr} (\href{https://orcid.org/0000-0002-4615-1512}{ORCID})
+  \item Myriam Maumy-Bertrand \email{myriam.maumy@ehesp.fr} (\href{https://orcid.org/0000-0002-4615-1512}{ORCID})
 }
 
 }

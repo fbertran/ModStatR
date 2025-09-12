@@ -6,7 +6,10 @@
 # Modélisation statistique par la pratique avec R
 ## Frédéric Bertrand, Emmanuel Claeys et Myriam Maumy-Bertrand
 
+<https://doi.org/10.32614/CRAN.package.ModStatR>
+
 <!-- badges: start -->
+[![](https://img.shields.io/badge/doi-10.32614/CRAN.package.ModStatR-blue.svg)](https://doi.org/10.32614/CRAN.package.ModStatR)
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![R-CMD-check](https://github.com/fbertran/ModStatR/workflows/R-CMD-check/badge.svg)](https://github.com/fbertran/ModStatR/actions)
@@ -14,7 +17,6 @@
 [![CRAN status](https://www.r-pkg.org/badges/version/ModStatR)](https://cran.r-project.org/package=ModStatR)
 [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/ModStatR)](https://cran.r-project.org/package=ModStatR)
 [![GitHub Repo stars](https://img.shields.io/github/stars/fbertran/ModStatR?style=social)](https://github.com/fbertran/ModStatR/)
-[![DOI](https://zenodo.org/badge/204068588.svg)](https://zenodo.org/badge/latestdoi/204068588)
 <!-- badges: end -->
 
 Le package ModStatR est un compagnon pour le livre [Modélisation statistique par la pratique avec R](https://www.dunod.com/sciences-techniques/modelisation-statistique-par-pratique-avec-r-cours-et-exercices-corriges).
