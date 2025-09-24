@@ -33,3 +33,4 @@ genlogo.R
 ^\.github$
 ^tools/coverage.R
 ^coverage.html
+\.DS_Store$
